@@ -1,24 +1,34 @@
+#' Title
+#'
+#' @return
+#' @export
+#' @import bslib
+#' @examples
+
 cyclestats_ui <- function() {
-# Define UI for application that draws a histogram
-fluidPage(
+  page_sidebar(
+    title = "Cycling Analysis",
+    sidebar = color_by,
 
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
+    layout_columns(
+      fill = FALSE,
+      value_box(
+        title = "Rides",
+        value = scales::unit_format(unit = "mm")(means[[2]]),
+        showcase = bsicons::bs_icon("bicycle")
+      ),
+      value_box(
+        title = "Miles",
+        value = scales::unit_format(unit = "g", big.mark = ",")(means[[3]]),
+        showcase = bsicons::bs_icon("speedometer2")
+      )
+    ),
 
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
-        )
-    )
-)
+    navset_card_pill(
+      title = "Miles by Month",
+      nav_panel("Graph", plotOutput("bill_length")),
+      nav_panel("Table", plotOutput("bill_depth")),
+      nav_panel("About", plotOutput("body_mass"))
+    ),
+  )
 }

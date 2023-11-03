@@ -6,7 +6,9 @@
 #' @examples
 
 cyclestats_init <- function() {
-  cards <- list(
+  data(penguins, package = "palmerpenguins")
+
+  cards <<- list(
     card(
       full_screen = TRUE,
       card_header("Bill Length"),
@@ -24,15 +26,17 @@ cyclestats_init <- function() {
     )
   )
 
-  color_by <- checkboxGroupInput(
+  color_by <<- checkboxGroupInput(
     inputId = "color_by",
     label = "Year(s)",
     choices = penguins[c("species", "island", "sex")],
     selected = "species"
   )
 
-  means <- colMeans(
+  means <<- colMeans(
     penguins[c("bill_length_mm", "bill_length_mm", "body_mass_g")],
     na.rm = TRUE
   )
 }
+
+cyclestats_init()

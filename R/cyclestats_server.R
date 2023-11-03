@@ -1,18 +1,24 @@
+# Define server logic
 
-# Define server logic required to draw a histogram
-cyclestats_server <- function(input, output, session) {
+#' Title
+#'
+#' @param input
+#' @param output
+#'
+#' @return
+#' @export
+#' @import ggplot2
+#' @examples
 
-    output$distPlot <- renderPlot({
+cyclestats_server <- function(input, output) {
+  gg_plot <- reactive({
+    ggplot(penguins) +
+      geom_density(aes(fill = !!input$color_by), alpha = 0.2) +
+      theme_bw(base_size = 16) +
+      theme(axis.title = element_blank())
+  })
 
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-
-    })
-
+  output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm))
+  output$bill_depth <- renderPlot(gg_plot() + aes(bill_depth_mm))
+  output$body_mass <- renderPlot(gg_plot() + aes(body_mass_g))
 }
