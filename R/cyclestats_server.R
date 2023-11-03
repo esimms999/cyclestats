@@ -20,5 +20,5 @@ cyclestats_server <- function(input, output) {
 
   output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm))
   output$bill_depth <- renderPlot(gg_plot() + aes(bill_depth_mm))
-  output$body_mass <- renderPlot(gg_plot() + aes(body_mass_g))
+  output$body_mass <- renderText("hELLO. sOME TEXT.")
 }
