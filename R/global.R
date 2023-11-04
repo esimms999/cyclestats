@@ -3,7 +3,7 @@
 #' @return
 #' @export
 #' @importFrom dplyr filter mutate select
-#' @importFrom lubridate mdy year
+#' @importFrom lubridate mdy year month
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_sub
 #' @examples
@@ -19,8 +19,10 @@ cyclestats_init <- function() {
                   "activity_distance" = "Distance...7") %>%
     dplyr::filter(activity_type == "Ride") %>%
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) %>%
-    dplyr::mutate(activity_date = lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)),
-                  activity_year = lubridate::year(activity_date))
+    dplyr::mutate(activity_date = format(as.Date(mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
+                  activity_year = format(as.Date(activity_date), "%Y"),
+                  activity_month = format(as.Date(activity_date), "%m"),
+                  activity_year_month = format(as.Date(activity_date), "%Y-%m"),)
 
   data(penguins, package = "palmerpenguins")
 
@@ -42,8 +44,9 @@ cyclestats_init <- function() {
     )
   )
 
+  # Create selection widget for years based on the years available
   available_years <- as.list(unique(activities$activity_year))
-  select_years <- activities$activity_year
+  #select_years <- activities$activity_year
   color_by <<- checkboxGroupInput(
     inputId = "color_by",
     label = "Selected Year(s):",
