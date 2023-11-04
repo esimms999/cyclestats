@@ -2,10 +2,10 @@
 % Please edit documentation in R/global.R
 \name{cyclestats_init}
 \alias{cyclestats_init}
-\title{Title}
+\title{Prepare data for use within the app}
 \usage{
 cyclestats_init()
 }
 \description{
-Title
+Prepare data for use within the app
 }

@@ -11,6 +11,10 @@
 #' @examples
 
 cyclestats_server <- function(input, output) {
+  activities_selected <- activities
+
+  #output$number_of_rides <- renderText(as.character(dplyr::count(activities)))
+
   gg_plot <- reactive({
     ggplot(penguins) +
       geom_density(aes(fill = !!input$color_by), alpha = 0.2) +
@@ -19,6 +23,6 @@ cyclestats_server <- function(input, output) {
   })
 
   output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm))
-  output$bill_depth <- renderPlot(gg_plot() + aes(bill_depth_mm))
+  output$bill_depth <- renderTable(activities)
   output$body_mass <- renderText("hELLO. sOME TEXT.")
 }
