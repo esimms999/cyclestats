@@ -13,11 +13,10 @@
 #' @examples
 
 cyclestats_server <- function(input, output) {
-  #output$number_of_rides <- renderText(as.character(dplyr::count(activities)))
 
   activities_selected <- reactive({
     activities %>%
-      filter(activity_year == "2019")
+      filter(activity_year %in% input$selected_years)
   })
 
   number_of_rides <- reactive({
@@ -41,7 +40,7 @@ cyclestats_server <- function(input, output) {
   })
 
   output$bill_length <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
-  output$bill_depth <- renderTable(activities)
+  output$bill_depth <- renderTable(activities_selected())
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/hello.txt', fragment.only = TRUE))
     })

@@ -8,7 +8,7 @@
 cyclestats_ui <- function() {
   page_sidebar(
     title = "Cycling Analysis",
-    sidebar = color_by,
+    sidebar = selected_years,
 
     layout_columns(
       fill = FALSE,

@@ -46,18 +46,18 @@ cyclestats_init <- function() {
 
   # Create selection widget for years based on the years available
   available_years <- as.list(unique(activities$activity_year))
-  #select_years <- activities$activity_year
-  color_by <<- checkboxGroupInput(
-    inputId = "color_by",
+
+  selected_years <<- checkboxGroupInput(
+    inputId = "selected_years",
     label = "Selected Year(s):",
     choices = available_years,
     selected = available_years
   )
 
-  means <<- colMeans(
-    penguins[c("bill_length_mm", "bill_length_mm", "body_mass_g")],
-    na.rm = TRUE
-  )
+  # means <<- colMeans(
+  #   penguins[c("bill_length_mm", "bill_length_mm", "body_mass_g")],
+  #   na.rm = TRUE
+  #)
 }
 
 cyclestats_init()
