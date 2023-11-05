@@ -8,6 +8,7 @@
 #' @return
 #' @export
 #' @import ggplot2
+#' @importFrom markdown markdownToHTML
 #' @examples
 
 cyclestats_server <- function(input, output) {
@@ -24,5 +25,7 @@ cyclestats_server <- function(input, output) {
 
   output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm))
   output$bill_depth <- renderTable(activities)
-  output$body_mass <- renderText("hELLO. sOME TEXT.")
+  output$about_text <- renderUI({
+    HTML(markdown::markdownToHTML('inst/www/hello.txt', fragment.only = TRUE))
+    })
 }

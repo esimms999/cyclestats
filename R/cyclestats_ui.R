@@ -28,7 +28,7 @@ cyclestats_ui <- function() {
       title = "Miles by Month",
       nav_panel("Graph", plotOutput("bill_length")),
       nav_panel("Table", tableOutput("bill_depth")),
-      nav_panel("About", textOutput("body_mass"))
+      nav_panel("About", uiOutput("about_text"))
     ),
   )
 }
