@@ -19,10 +19,12 @@ cyclestats_init <- function() {
                   "activity_distance" = "Distance...7") %>%
     dplyr::filter(activity_type == "Ride") %>%
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) %>%
-    dplyr::mutate(activity_date = format(as.Date(mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
+    dplyr::mutate(activity_id = as.character(activity_id),
+                  activity_date = format(as.Date(mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
                   activity_year = format(as.Date(activity_date), "%Y"),
                   activity_month = format(as.Date(activity_date), "%m"),
-                  activity_year_month = format(as.Date(activity_date), "%Y-%m"),)
+                  activity_year_month = format(as.Date(activity_date), "%Y-%m"),
+                  activity_distance = round(activity_distance * 0.6214, digits = 2))
 
   data(penguins, package = "palmerpenguins")
 
@@ -50,8 +52,7 @@ cyclestats_init <- function() {
   selected_years <<- checkboxGroupInput(
     inputId = "selected_years",
     label = "Selected Year(s):",
-    choices = available_years,
-    selected = available_years
+    choices = available_years
   )
 
   # means <<- colMeans(
