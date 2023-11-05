@@ -15,26 +15,32 @@
 cyclestats_server <- function(input, output) {
   #output$number_of_rides <- renderText(as.character(dplyr::count(activities)))
 
-  number_of_rides <- reactive({
-    activities_selected <- activities %>%
+  activities_selected <- reactive({
+    activities %>%
       filter(activity_year == "2019")
-    as.character(dplyr::count(activities_selected))
+  })
+
+  number_of_rides <- reactive({
+    as.character(dplyr::count(activities_selected()))
   })
 
   number_of_miles <- reactive({
-    activities_selected <- activities %>%
-      filter(activity_year == "2019")
-    as.character(sum(activities_selected$activity_distance))
+    as.character(sum(activities_selected()$activity_distance))
   })
 
   gg_plot <- reactive({
-    ggplot(penguins) +
-      geom_density(aes(fill = !!input$color_by), alpha = 0.2) +
-      theme_bw(base_size = 16) +
-      theme(axis.title = element_blank())
+    ggplot(data = activities_selected(), aes(x = activity_year_month, y = activity_distance)) +
+      geom_col(fill = "blue") +
+      ggtitle("Total Miles by Month") +
+      xlab("Month") +
+      ylab("Miles") +
+      theme(axis.text.x = element_text(angle = 90)) +
+      theme(panel.border = element_rect(color = "blue",
+                                        fill = NA,
+                                        size = 1))
   })
 
-  output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm))
+  output$bill_length <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
   output$bill_depth <- renderTable(activities)
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/hello.txt', fragment.only = TRUE))

@@ -26,7 +26,7 @@ cyclestats_ui <- function() {
     ),
 
     navset_card_pill(
-      title = "Miles by Month",
+      title = "",
       nav_panel("Graph", plotOutput("bill_length")),
       nav_panel("Table", tableOutput("bill_depth")),
       nav_panel("About", uiOutput("about_text"))
