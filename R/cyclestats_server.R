@@ -8,13 +8,24 @@
 #' @return
 #' @export
 #' @import ggplot2
+#' @importFrom dplyr count
 #' @importFrom markdown markdownToHTML
 #' @examples
 
 cyclestats_server <- function(input, output) {
-  activities_selected <- activities
-
   #output$number_of_rides <- renderText(as.character(dplyr::count(activities)))
+
+  number_of_rides <- reactive({
+    activities_selected <- activities %>%
+      filter(activity_year == "2019")
+    as.character(dplyr::count(activities_selected))
+  })
+
+  number_of_miles <- reactive({
+    activities_selected <- activities %>%
+      filter(activity_year == "2019")
+    as.character(sum(activities_selected$activity_distance))
+  })
 
   gg_plot <- reactive({
     ggplot(penguins) +
@@ -28,4 +39,6 @@ cyclestats_server <- function(input, output) {
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/hello.txt', fragment.only = TRUE))
     })
+  output$number_of_rides <- renderText(number_of_rides())
+  output$number_of_miles <- renderText(number_of_miles())
 }

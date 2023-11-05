@@ -14,12 +14,13 @@ cyclestats_ui <- function() {
       fill = FALSE,
       value_box(
         title = "Rides",
-        value = scales::unit_format(unit = "mm")(means[[2]]),
+        #value = scales::unit_format(unit = "mm")(means[[2]]),
+        value = textOutput("number_of_rides"),
         showcase = bsicons::bs_icon("bicycle")
       ),
       value_box(
         title = "Miles",
-        value = scales::unit_format(unit = "g", big.mark = ",")(means[[3]]),
+        value = textOutput("number_of_miles"),
         showcase = bsicons::bs_icon("speedometer2")
       )
     ),
