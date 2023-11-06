@@ -1,4 +1,4 @@
-# Cyclestats
+# cyclestats
 <br><br>
 ![](bike.jpg)
 
