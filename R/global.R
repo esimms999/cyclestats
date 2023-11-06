@@ -26,23 +26,23 @@ cyclestats_init <- function() {
                   activity_year_month = format(as.Date(activity_date), "%Y-%m"),
                   activity_distance = round(activity_distance * 0.6214, digits = 2))
 
-  cards <<- list(
-    card(
-      full_screen = TRUE,
-      card_header("Bill Length"),
-      plotOutput("bill_length")
-    ),
-    card(
-      full_screen = TRUE,
-      card_header("Bill depth"),
-      plotOutput("bill_depth")
-    ),
-    card(
-      full_screen = TRUE,
-      card_header("Body Mass"),
-      plotOutput("body_mass")
-    )
-  )
+  # cards <<- list(
+  #   card(
+  #     full_screen = TRUE,
+  #     card_header("Bill Length"),
+  #     plotOutput("bill_length")
+  #   ),
+  #   card(
+  #     full_screen = TRUE,
+  #     card_header("Bill depth"),
+  #     plotOutput("bill_depth")
+  #   ),
+  #   card(
+  #     full_screen = TRUE,
+  #     card_header("Body Mass"),
+  #     plotOutput("body_mass")
+  #   )
+  # )
 
   # Create selection widget for years based on the years available
   available_years <- as.list(unique(activities$activity_year))

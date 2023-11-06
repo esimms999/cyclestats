@@ -39,8 +39,8 @@ cyclestats_server <- function(input, output) {
                                         linewidth = 1))
   })
 
-  output$bill_length <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
-  output$bill_depth <- renderTable(activities_selected())
+  output$miles_graph <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
+  output$miles_table <- renderDataTable(activities_selected())
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/about.txt', fragment.only = TRUE))
     })

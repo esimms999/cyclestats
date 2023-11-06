@@ -27,8 +27,8 @@ cyclestats_ui <- function() {
 
     navset_card_pill(
       title = "",
-      nav_panel("Graph", plotOutput("bill_length", width = "500", height = "auto")),
-      nav_panel("Table", tableOutput("bill_depth")),
+      nav_panel("Graph", plotOutput("miles_graph", width = "500", height = "auto")),
+      nav_panel("Table", div(dataTableOutput("miles_table"), style = "font-size:80%")),
       nav_panel("About", uiOutput("about_text"))
     ),
   )
