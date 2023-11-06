@@ -26,8 +26,6 @@ cyclestats_init <- function() {
                   activity_year_month = format(as.Date(activity_date), "%Y-%m"),
                   activity_distance = round(activity_distance * 0.6214, digits = 2))
 
-  data(penguins, package = "palmerpenguins")
-
   cards <<- list(
     card(
       full_screen = TRUE,
@@ -54,11 +52,6 @@ cyclestats_init <- function() {
     label = "Selected Year(s):",
     choices = available_years
   )
-
-  # means <<- colMeans(
-  #   penguins[c("bill_length_mm", "bill_length_mm", "body_mass_g")],
-  #   na.rm = TRUE
-  #)
 }
 
 cyclestats_init()
