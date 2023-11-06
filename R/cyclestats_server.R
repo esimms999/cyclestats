@@ -36,7 +36,7 @@ cyclestats_server <- function(input, output) {
       theme(axis.text.x = element_text(angle = 90)) +
       theme(panel.border = element_rect(color = "blue",
                                         fill = NA,
-                                        size = 1))
+                                        linewidth = 1))
   })
 
   output$bill_length <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
