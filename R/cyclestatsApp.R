@@ -6,7 +6,7 @@
 #'
 #' @import shiny
 #'
-#' @export
+#' @export cyclestatsApp
 #'
 cyclestatsApp <- function() {
   shinyApp(ui = cyclestats_ui, server = cyclestats_server)
