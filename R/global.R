@@ -12,15 +12,18 @@ cyclestats_init <- function() {
   # The activities.csv file has been downloaded from Strava and placed in /inst/extdata
   activities <<- readr::read_csv("inst/extdata/activities.csv",
                                  show_col_types = FALSE,
+                                 col_select = c(1:7),
                                  name_repair = "minimal") %>%
 
     dplyr::rename("activity_id" = "Activity ID",
                   "activity_datetime" = "Activity Date",
                   "activity_name" = "Activity Name",
                   "activity_type" = "Activity Type",
-                  "activity_distance" = "Distance...7") %>%
+                  "activity_distance" = "Distance") %>%
+
     dplyr::filter(activity_type == "Ride") %>%
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) %>%
+
     dplyr::mutate(activity_id = as.character(activity_id),
                   activity_date = format(as.Date(lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
                   activity_year = format(as.Date(activity_date), "%Y"),
