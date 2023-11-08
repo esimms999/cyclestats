@@ -31,7 +31,7 @@ cyclestats_server <- function(input, output) {
     ggplot(data = activities_selected(), aes(x = activity_year_month, y = activity_distance)) +
       geom_col(fill = "blue") +
       ggtitle("Total Miles by Month") +
-      xlab("Month") +
+      xlab("\nMonth") +
       ylab("Miles") +
       theme(axis.text.x = element_text(angle = 90)) +
       theme(panel.border = element_rect(color = "blue",
@@ -39,7 +39,7 @@ cyclestats_server <- function(input, output) {
                                         linewidth = 1))
   })
 
-  output$miles_graph <- renderPlot(gg_plot(), width = 500, height = 500, res = 128)
+  output$miles_graph <- renderPlot(gg_plot(), width = "auto", height = "auto", res = 128)
   output$miles_table <- renderDataTable(activities_selected())
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/about.txt', fragment.only = TRUE))

@@ -8,6 +8,7 @@
 cyclestats_ui <- function() {
   page_sidebar(
     title = "Cycling Analysis",
+    bg = "lightblue",
     sidebar = selected_years,
 
     layout_columns(
@@ -27,7 +28,7 @@ cyclestats_ui <- function() {
 
     navset_card_pill(
       title = "",
-      nav_panel("Graph", plotOutput("miles_graph", width = "500", height = "auto")),
+      nav_panel("Graph", plotOutput("miles_graph", width = "auto", height = "auto")),
       nav_panel("Table", div(dataTableOutput("miles_table"), style = "font-size:80%")),
       nav_panel("About", uiOutput("about_text"))
     ),

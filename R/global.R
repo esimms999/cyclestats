@@ -2,9 +2,9 @@
 #'
 #' @return
 #' @export
+#' @import magrittr
 #' @importFrom dplyr filter mutate select
-#' @importFrom lubridate mdy year month
-#' @importFrom magrittr %>%
+#' @importFrom lubridate mdy
 #' @importFrom stringr str_sub
 #' @examples
 
@@ -20,7 +20,7 @@ cyclestats_init <- function() {
     dplyr::filter(activity_type == "Ride") %>%
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) %>%
     dplyr::mutate(activity_id = as.character(activity_id),
-                  activity_date = format(as.Date(mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
+                  activity_date = format(as.Date(lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
                   activity_year = format(as.Date(activity_date), "%Y"),
                   activity_month = format(as.Date(activity_date), "%m"),
                   activity_year_month = format(as.Date(activity_date), "%Y-%m"),
@@ -35,5 +35,7 @@ cyclestats_init <- function() {
     choices = available_years
   )
 }
+
+library(magrittr) # I don't know why this is necessary for shinapps.io - need to investigate!
 
 cyclestats_init()
