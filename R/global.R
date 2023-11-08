@@ -11,7 +11,9 @@
 cyclestats_init <- function() {
   # The activities.csv file has been downloaded from Strava and placed in /inst/extdata
   activities <<- readr::read_csv("inst/extdata/activities.csv",
-                                 show_col_types = FALSE) %>%
+                                 show_col_types = FALSE,
+                                 name_repair = "minimal") %>%
+
     dplyr::rename("activity_id" = "Activity ID",
                   "activity_datetime" = "Activity Date",
                   "activity_name" = "Activity Name",
