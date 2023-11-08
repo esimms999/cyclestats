@@ -36,6 +36,6 @@ cyclestats_init <- function() {
   )
 }
 
-library(magrittr) # I don't know why this is necessary for shinapps.io - need to investigate!
+###library(magrittr) # I don't know why this is necessary for shinapps.io - need to investigate!
 
 cyclestats_init()

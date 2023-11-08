@@ -3,6 +3,7 @@
 #' @return
 #' @export
 #' @import bslib
+#' @import bsicons
 #' @examples
 
 cyclestats_ui <- function() {
