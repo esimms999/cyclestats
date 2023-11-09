@@ -13,16 +13,16 @@ cyclestats_init <- function() {
   activities <<- readr::read_csv("inst/extdata/activities.csv",
                                  show_col_types = FALSE,
                                  col_select = c(1:7),
-                                 name_repair = "minimal") %>%
+                                 name_repair = "minimal") |>
 
     dplyr::rename("activity_id" = "Activity ID",
                   "activity_datetime" = "Activity Date",
                   "activity_name" = "Activity Name",
                   "activity_type" = "Activity Type",
-                  "activity_distance" = "Distance") %>%
+                  "activity_distance" = "Distance") |>
 
-    dplyr::filter(activity_type == "Ride") %>%
-    dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) %>%
+    dplyr::filter(activity_type == "Ride") |>
+    dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) |>
 
     dplyr::mutate(activity_id = as.character(activity_id),
                   activity_date = format(as.Date(lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),

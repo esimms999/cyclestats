@@ -15,7 +15,7 @@
 cyclestats_server <- function(input, output) {
 
   activities_selected <- reactive({
-    activities %>%
+    activities |>
       dplyr::filter(activity_year %in% input$selected_years)
   })
 
@@ -27,9 +27,9 @@ cyclestats_server <- function(input, output) {
   # Create records for those with zero miles.
 
   activities_selected_sum <- reactive({
-    activities %>%
-      dplyr::filter(activity_year %in% input$selected_years) %>%
-      dplyr::group_by(activity_year_month) %>%
+    activities |>
+      dplyr::filter(activity_year %in% input$selected_years) |>
+      dplyr::group_by(activity_year_month) |>
       dplyr::summarise(total_distance = sum(activity_distance))
   })
 
