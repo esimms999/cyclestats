@@ -10,7 +10,12 @@ cyclestats_ui <- function() {
   page_sidebar(
     title = "Cycling Analysis",
     bg = "lightblue",
-    sidebar = selected_years,
+
+    sidebar = checkboxGroupInput(
+      inputId = "selected_years",
+      label = "Selected Year(s):",
+      choices = available_years
+    ),
 
     layout_columns(
       fill = FALSE,

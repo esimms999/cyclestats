@@ -31,14 +31,9 @@ cyclestats_init <- function() {
                   activity_year_month = format(as.Date(activity_date), "%Y-%m"),
                   activity_distance = round(activity_distance * 0.6214, digits = 2))
 
-  # Create selection widget for years based on the years available
-  available_years <- as.list(unique(activities$activity_year))
+  # Find years available; used to create selection widget for years
+  available_years <<- as.list(unique(activities$activity_year))
 
-  selected_years <<- checkboxGroupInput(
-    inputId = "selected_years",
-    label = "Selected Year(s):",
-    choices = available_years
-  )
 }
 
 library(magrittr) # I don't know why this is necessary for shinapps.io - need to investigate!

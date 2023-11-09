@@ -5,7 +5,8 @@
 #pkgload::load_all(".")
 
 # Set option to avoid warning about R directory, etc.
-options(shiny.autoload.r=FALSE)
+# This does not seem to work. Trying another proposed solution: R/_disable.R
+# options(shiny.autoload.r=FALSE)
 
 pkgload::load_all(export_all = FALSE,
                   helpers = FALSE,
