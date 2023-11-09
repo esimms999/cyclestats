@@ -14,6 +14,17 @@
 
 cyclestats_server <- function(input, output) {
 
+  # value_box for number of rides
+  number_of_rides <- reactive({
+    as.character(dplyr::count(activities_selected()))
+  })
+
+  # value_box for number of miles
+  number_of_miles <- reactive({
+    as.character(sum(activities_selected()$activity_distance))
+  })
+
+  # Filter by selected years
   activities_selected <- reactive({
     activities |>
       dplyr::filter(activity_year %in% input$selected_years)
@@ -31,14 +42,6 @@ cyclestats_server <- function(input, output) {
       dplyr::filter(activity_year %in% input$selected_years) |>
       dplyr::group_by(activity_year_month) |>
       dplyr::summarise(total_distance = sum(activity_distance))
-  })
-
-  number_of_rides <- reactive({
-    as.character(dplyr::count(activities_selected()))
-  })
-
-  number_of_miles <- reactive({
-    as.character(sum(activities_selected()$activity_distance))
   })
 
   gg_plot <- reactive({
