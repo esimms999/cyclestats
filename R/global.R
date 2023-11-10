@@ -10,6 +10,7 @@
 
 cyclestats_init <- function() {
   # The activities.csv file has been downloaded from Strava and placed in /inst/extdata
+  # Keep only ride info, convert from km to miles, keep only variables which will be used n the app.
   activities <<- readr::read_csv("inst/extdata/activities.csv",
                                  show_col_types = FALSE,
                                  col_select = c(1:7),
@@ -33,9 +34,8 @@ cyclestats_init <- function() {
 
   # Find years available; used to create selection widget for years
   available_years <<- as.list(unique(activities$activity_year))
-
 }
 
-library(magrittr) # I don't know why this is necessary for shinapps.io - need to investigate!
-
 cyclestats_init()
+
+
