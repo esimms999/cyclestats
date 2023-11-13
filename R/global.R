@@ -3,9 +3,6 @@
 #' @return
 #' @export
 #' @import magrittr
-#' @importFrom dplyr filter mutate select
-#' @importFrom lubridate mdy
-#' @importFrom stringr str_sub
 #' @examples
 
 cyclestats_init <- function() {
@@ -34,6 +31,22 @@ cyclestats_init <- function() {
 
   # Find years available; used to create selection widget for years
   available_years <<- as.list(unique(activities$activity_year))
+
+  # In the graph, we want to show distance as zero for year_month without records.
+  # This dataframe will be subset and merged with the activities in order to add
+  # these zero records.
+
+  activity_year <- c()
+  activity_year_month <- c()
+  for (year in available_years) {
+    for (month in 1:12) {
+      year_month <- paste(year, formatC(month, width = 2, flag = 0), sep = "-")
+      activity_year_month <- append(activity_year_month, year_month)
+      activity_year <- append(activity_year, year)
+    }
+  }
+  activity_year_month_zero <<- data.frame(activity_year, activity_year_month) |>
+  dplyr::arrange(activity_year_month)
 }
 
 cyclestats_init()

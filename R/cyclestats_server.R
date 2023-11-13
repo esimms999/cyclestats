@@ -8,8 +8,6 @@
 #' @return
 #' @export
 #' @import ggplot2
-#' @importFrom dplyr count filter group_by summarise
-#' @importFrom markdown markdownToHTML
 #' @examples
 
 cyclestats_server <- function(input, output) {
@@ -44,8 +42,15 @@ cyclestats_server <- function(input, output) {
       dplyr::summarise(total_distance = sum(activity_distance))
   })
 
+  activities_selected_graph <- reactive({
+    activity_year_month_zero |>
+      dplyr::filter(activity_year %in% input$selected_years) |>
+      dplyr::left_join(activities_selected_sum(), by = "activity_year_month") |>
+      dplyr::mutate(total_distance = (dplyr::if_else(is.na(total_distance), 0, total_distance)))
+  })
+
   gg_plot <- reactive({
-    ggplot(data = activities_selected_sum(), aes(x = activity_year_month, y = total_distance)) +
+    ggplot(data = activities_selected_graph(), aes(x = activity_year_month, y = total_distance)) +
       geom_col(fill = "blue") +
       ggtitle("Total Miles by Month") +
       xlab("\nMonth") +
