@@ -1,0 +1,11 @@
+url: https://esimms999.github.io/ericstrava/
+template:
+  bootstrap: 5
+  theme: breeze-light
+footer:
+  structure:
+    left: developed_by
+    right: [built_with, built_text, built_date]
+  components:
+    built_date: !expr "format(Sys.time(), '%Y-%m-%d %H:%M %Z')"
+    built_text: "<br>on "
