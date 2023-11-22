@@ -10,5 +10,5 @@ cyclestatsApp()
 shiny app
 }
 \description{
-Wrapper function for `shinyApp()`
+Wrapper function for \code{shinyApp()}
 }
