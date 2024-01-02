@@ -8,6 +8,7 @@
 #' @return
 #' @export
 #' @import ggplot2
+#' @import plotly
 #' @examples
 
 cyclestats_server <- function(input, output) {
@@ -50,16 +51,25 @@ cyclestats_server <- function(input, output) {
   })
 
   gg_plot <- reactive({
-    ggplot(data = activities_selected_graph(), aes(x = activity_year_month, y = total_distance)) +
-      geom_col(fill = "blue") +
-      ggtitle("Total Miles by Month") +
-      xlab("\nMonth") +
-      ylab("Miles") +
-      theme(axis.text.x = element_text(angle = 90)) +
-      theme(panel.border = element_rect(color = "blue",
-                                        fill = NA,
-                                        linewidth = 1))
-  })
+    plotly::ggplotly(
+      ggplot(data = activities_selected_graph(),
+             aes(x = activity_year_month,
+                 y = total_distance,
+                 text = paste("Total Distance: ", total_distance,
+                              "\nYear-Month: ", activity_year_month)
+                 )
+             ) +
+        geom_col(fill = "blue") +
+        ggtitle("Total Miles by Month") +
+        xlab("\nMonth") +
+        ylab("Miles") +
+        theme(axis.text.x = element_text(angle = 90)) +
+        theme(panel.border = element_rect(color = "blue",
+                                          fill = NA,
+                                          linewidth = 1)),
+      tooltip = c("text")
+      )
+    })
 
   output$miles_graph <- renderPlot(gg_plot(), width = "auto", height = "auto", res = 128)
   output$miles_table <- renderDataTable(activities_selected())

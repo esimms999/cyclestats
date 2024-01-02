@@ -15,6 +15,7 @@ Imports:
     lubridate,
     magrittr,
     markdown,
+    plotly,
     shiny,
     stringr
 Suggests: 
