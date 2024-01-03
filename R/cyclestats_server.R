@@ -8,7 +8,7 @@
 #' @return
 #' @export
 #' @import ggplot2
-#' @import plotly
+#' @rawimport(plotly except = last_plot)
 #' @examples
 
 cyclestats_server <- function(input, output) {
@@ -52,13 +52,13 @@ cyclestats_server <- function(input, output) {
 
   gg_plot <- reactive({
     plotly::ggplotly(
-      ggplot(data = activities_selected_graph(),
-             aes(x = activity_year_month,
-                 y = total_distance,
-                 text = paste("Total Distance: ", total_distance,
-                              "\nYear-Month: ", activity_year_month)
-                 )
-             ) +
+      ggplot2::ggplot(data = activities_selected_graph(),
+                      aes(x = activity_year_month,
+                          y = total_distance,
+                          text = paste("Total Distance: ", total_distance,
+                                       "\nYear-Month: ", activity_year_month)
+                          )
+                      ) +
         geom_col(fill = "blue") +
         ggtitle("Total Miles by Month") +
         xlab("\nMonth") +
@@ -67,11 +67,12 @@ cyclestats_server <- function(input, output) {
         theme(panel.border = element_rect(color = "blue",
                                           fill = NA,
                                           linewidth = 1)),
-      tooltip = c("text")
-      )
+     tooltip = c("text")
+     )
     })
 
-  output$miles_graph <- renderPlot(gg_plot(), width = "auto", height = "auto", res = 128)
+  #output$miles_graph <- plotly::renderPlotly(gg_plot(), width = "auto", height = "auto", res = 128)
+  output$miles_graph <- plotly::renderPlotly(gg_plot())
   output$miles_table <- renderDataTable(activities_selected())
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/about.txt', fragment.only = TRUE))
