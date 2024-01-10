@@ -19,5 +19,6 @@ Imports:
     magrittr,
     markdown,
     plotly,
+    readr,
     shiny,
     stringr

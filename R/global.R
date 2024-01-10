@@ -3,6 +3,7 @@
 #' @return
 #' @export
 #' @import magrittr
+#' @importFrom readr read_csv
 #' @examples
 
 cyclestats_init <- function() {
