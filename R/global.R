@@ -24,6 +24,9 @@ cyclestats_init <- function() {
     dplyr::filter(activity_type == "Ride") |>
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance, activity_moving_time) |>
 
+    # Fix an error in the data
+    dplyr::mutate(activity_moving_time = ifelse(activity_id == "2949643229", 3271, activity_moving_time)) |>
+
     dplyr::mutate(activity_id = as.character(activity_id),
                   activity_date = format(as.Date(lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
                   activity_year = format(as.Date(activity_date), "%Y"),
