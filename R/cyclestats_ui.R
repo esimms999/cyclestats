@@ -35,7 +35,7 @@ cyclestats_ui <- function() {
     ),
 
     navset_card_pill(
-      title = "",
+      id = "tab_being_displayed",
       nav_panel("Graph", plotly::plotlyOutput("miles_graph", width = "auto", height = "auto")),
       nav_panel("Table", div(DT::DTOutput("miles_table"), style = "font-size:80%")),
       nav_panel("About", uiOutput("about_text"))

@@ -76,7 +76,7 @@ cyclestats_server <- function(input, output) {
   output$miles_graph <- plotly::renderPlotly(gg_plot())
   output$miles_table <- DT::renderDT(activities_selected())
   output$about_text <- renderUI({
-    HTML(markdown::markdownToHTML('inst/www/about.txt', fragment.only = TRUE))
+    HTML(markdown::markdownToHTML('inst/www/about.md', fragment.only = TRUE))
     })
   output$number_of_rides <- renderText(number_of_rides())
   output$number_of_miles <- renderText(number_of_miles())
