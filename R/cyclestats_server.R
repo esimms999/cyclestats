@@ -8,6 +8,7 @@
 #' @return
 #' @export
 #' @import ggplot2
+#' @importFrom DT renderDataTable
 #' @rawimport(plotly except = last_plot)
 #' @examples
 
@@ -73,7 +74,7 @@ cyclestats_server <- function(input, output) {
 
   #output$miles_graph <- plotly::renderPlotly(gg_plot(), width = "auto", height = "auto", res = 128)
   output$miles_graph <- plotly::renderPlotly(gg_plot())
-  output$miles_table <- renderDataTable(activities_selected(), options = list(paging=FALSE))
+  output$miles_table <- DT::renderDataTable(activities_selected())
   output$about_text <- renderUI({
     HTML(markdown::markdownToHTML('inst/www/about.txt', fragment.only = TRUE))
     })
