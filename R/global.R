@@ -51,7 +51,7 @@ cyclestats_init <- function() {
     }
   }
   activity_year_month_zero <<- data.frame(activity_year, activity_year_month) |>
-  dplyr::arrange(activity_year_month)
+    dplyr::arrange(activity_year_month)
 }
 
 cyclestats_init()
