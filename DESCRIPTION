@@ -1,12 +1,15 @@
 Package: cyclestats
-Title: Analysis of Cycling Data
+Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("E.", "Simms", , "esimms@yahoo.com", role = c("aut", "cre"))
-Description: PKG_DESC.
-License: MIT + file LICENSE
-URL: https://github.com/esimms999/cyclestats
-BugReports: https://github.com/esimms999/cyclestats/issues
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
 Imports: 
     bsicons,
     bslib,
@@ -31,3 +34,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 RoxygenNote: 7.3.1
+
