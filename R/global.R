@@ -32,7 +32,7 @@ cyclestats_init <- function() {
                   activity_distance = round(activity_distance * 0.6214, digits = 2),
                   activity_avg_speed = round(activity_distance / (activity_moving_time / 3600), digits = 2)) |>
 
-    dplyr::select(-activity_moving_time)
+    dplyr::select(activity_id, activity_name, activity_datetime, activity_date, activity_year, activity_month, activity_year_month, activity_distance, activity_avg_speed)
 
   # Find years available; used to create selection widget for years
   available_years <<- as.list(unique(activities$activity_year))
