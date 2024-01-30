@@ -4,7 +4,7 @@
 #' @export
 #' @import bslib
 #' @import bsicons
-#' @importFrom DT dataTableOutput
+#' @importFrom DT DTOutput
 #' @rawimport(plotly except = last_plot)
 #' @examples
 
@@ -37,7 +37,7 @@ cyclestats_ui <- function() {
     navset_card_pill(
       title = "",
       nav_panel("Graph", plotly::plotlyOutput("miles_graph", width = "auto", height = "auto")),
-      nav_panel("Table", div(DT::dataTableOutput("miles_table"), style = "font-size:80%")),
+      nav_panel("Table", div(DT::DTOutput("miles_table"), style = "font-size:80%")),
       nav_panel("About", uiOutput("about_text"))
     ),
   )
