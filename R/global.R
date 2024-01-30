@@ -2,33 +2,37 @@
 #'
 #' @return
 #' @export
+#' @importFrom dplyr filter mutate rename select
 #' @import magrittr
 #' @importFrom readr read_csv
-#' @examples
 
 cyclestats_init <- function() {
   # The activities.csv file has been downloaded from Strava and placed in /inst/extdata
-  # Keep only ride info, convert from km to miles, keep only variables which will be used n the app.
+  # Keep only ride info, convert from km to miles, keep only variables which will be used in the app.
   activities <<- readr::read_csv("inst/extdata/activities.csv",
                                  show_col_types = FALSE,
-                                 col_select = c(1:7),
+                                 col_select = c(1:7, 17),
                                  name_repair = "minimal") |>
 
     dplyr::rename("activity_id" = "Activity ID",
                   "activity_datetime" = "Activity Date",
                   "activity_name" = "Activity Name",
                   "activity_type" = "Activity Type",
-                  "activity_distance" = "Distance") |>
+                  "activity_distance" = "Distance",
+                  "activity_moving_time" = "Moving Time") |>
 
     dplyr::filter(activity_type == "Ride") |>
-    dplyr::select(activity_id, activity_datetime, activity_name, activity_distance) |>
+    dplyr::select(activity_id, activity_datetime, activity_name, activity_distance, activity_moving_time) |>
 
     dplyr::mutate(activity_id = as.character(activity_id),
                   activity_date = format(as.Date(lubridate::mdy(stringr::str_sub(activity_datetime, 1L, 12L)), "%Y-%m-%d")),
                   activity_year = format(as.Date(activity_date), "%Y"),
                   activity_month = format(as.Date(activity_date), "%m"),
                   activity_year_month = format(as.Date(activity_date), "%Y-%m"),
-                  activity_distance = round(activity_distance * 0.6214, digits = 2))
+                  activity_distance = round(activity_distance * 0.6214, digits = 2),
+                  activity_avg_speed = round(activity_distance / (activity_moving_time / 3600), digits = 2)) |>
+
+    dplyr::select(-activity_moving_time)
 
   # Find years available; used to create selection widget for years
   available_years <<- as.list(unique(activities$activity_year))
