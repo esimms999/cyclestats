@@ -2,13 +2,13 @@
 % Please edit documentation in R/cyclestats_server.R
 \name{cyclestats_server}
 \alias{cyclestats_server}
-\title{Title}
+\title{Server for cyclestats app}
 \usage{
 cyclestats_server(input, output)
 }
-\arguments{
-\item{output}{}
+\value{
+\code{server} argument in \code{cyclestatsApp()}
 }
 \description{
-Title
+Server for cyclestats app
 }

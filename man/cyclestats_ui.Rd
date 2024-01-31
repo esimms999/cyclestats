@@ -6,6 +6,9 @@
 \usage{
 cyclestats_ui()
 }
+\value{
+\code{ui} argument in \code{cyclestatsApp()}
+}
 \description{
-Title
+UI for cyclestats app
 }

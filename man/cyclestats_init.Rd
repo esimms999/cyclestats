@@ -7,5 +7,5 @@
 cyclestats_init()
 }
 \description{
-Prepare data for use within the app
+Code to run at start of cyclestats app
 }

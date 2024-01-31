@@ -1,14 +1,16 @@
 #' Title
 #'
-#' @return
-#' @export
+#' UI for cyclestats app
 #' @import bslib
 #' @import bsicons
+#' @import shiny
 #' @importFrom DT DTOutput
-#' @rawimport(plotly except = last_plot)
-#' @examples
+#' @rawNamespace import(shinyjs, except=c(runExample))
+#' @rawNamespace import(plotly, except = last_plot)
+#' @return `ui` argument in `cyclestatsApp()`
 
 cyclestats_ui <- function() {
+  useShinyjs()
   page_sidebar(
     title = "Cycling Analysis",
     bg = "lightblue",

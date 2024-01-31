@@ -1,16 +1,11 @@
 # Define server logic
 
-#' Title
+#' Server for cyclestats app
 #'
-#' @param input
-#' @param output
-#'
-#' @return
-#' @export
 #' @import ggplot2
 #' @importFrom DT renderDT
-#' @rawimport(plotly except = last_plot)
-#' @examples
+#' @rawNamespace import(plotly, except = last_plot)
+#' @return `server` argument in `cyclestatsApp()`
 
 cyclestats_server <- function(input, output) {
 
