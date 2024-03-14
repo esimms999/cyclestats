@@ -1,9 +1,8 @@
 #' Prepare data for use within the app
 #'
-#' @return
+#' Code to run at start of cyclestats app
 #' @export
 #' @importFrom dplyr filter mutate rename select
-#' @import magrittr
 #' @importFrom readr read_csv
 
 cyclestats_init <- function() {
