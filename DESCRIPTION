@@ -22,6 +22,7 @@ Imports:
     plotly,
     readr,
     shiny,
+    shinyjs,
     stringr
 Suggests: 
     knitr,
