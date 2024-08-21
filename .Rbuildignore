@@ -1,3 +1,5 @@
+^renv$
+^renv\.lock$
 ^cyclestats\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
