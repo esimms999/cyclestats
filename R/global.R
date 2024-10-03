@@ -57,5 +57,3 @@ cyclestats_init <- function() {
 }
 
 cyclestats_init()
-
-
