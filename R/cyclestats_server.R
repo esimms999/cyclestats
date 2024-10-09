@@ -51,8 +51,8 @@ cyclestats_server <- function(input, output) {
       ggplot2::ggplot(data = activities_selected_graph(),
                       aes(x = activity_year_month,
                           y = total_distance,
-                          text = paste("Total Distance: ", total_distance,
-                                       "\nYear-Month: ", activity_year_month)
+                          text = paste("Year-Month: ", activity_year_month,
+                                       "\nDistance: ", total_distance)
                           )
                       ) +
         geom_col(fill = "blue") +
