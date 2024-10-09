@@ -2,7 +2,7 @@
 #'
 #' Code to run at start of cyclestats app
 #' @export
-#' @importFrom dplyr filter mutate rename select
+#' @importFrom dplyr filter group_by mutate rename select summarise
 #' @importFrom readr read_csv
 
 cyclestats_init <- function() {
