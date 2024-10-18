@@ -36,8 +36,9 @@ cyclestats_server <- function(input, output) {
     activities |>
       dplyr::filter(activity_year %in% input$selected_years) |>
       dplyr::group_by(activity_year_month) |>
+      dplyr::mutate(ride_count = 1) |>
       dplyr::summarise(total_distance = sum(activity_distance),
-                       total_rides = sum(activity_distance))
+                       total_rides = sum(ride_count))
   })
 
   activities_selected_graph <- reactive({
