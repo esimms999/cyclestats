@@ -36,14 +36,17 @@ cyclestats_server <- function(input, output) {
     activities |>
       dplyr::filter(activity_year %in% input$selected_years) |>
       dplyr::group_by(activity_year_month) |>
-      dplyr::summarise(total_distance = sum(activity_distance))
+      dplyr::mutate(ride_count = 1) |>
+      dplyr::summarise(total_distance = sum(activity_distance),
+                       total_rides = sum(ride_count))
   })
 
   activities_selected_graph <- reactive({
     activity_year_month_zero |>
       dplyr::filter(activity_year %in% input$selected_years) |>
       dplyr::left_join(activities_selected_sum(), by = "activity_year_month") |>
-      dplyr::mutate(total_distance = (dplyr::if_else(is.na(total_distance), 0, total_distance)))
+      dplyr::mutate(total_distance = (dplyr::if_else(is.na(total_distance), 0, total_distance)),
+                    total_rides = (dplyr::if_else(is.na(total_rides), 0, total_rides)))
   })
 
   gg_plot <- reactive({
@@ -51,8 +54,9 @@ cyclestats_server <- function(input, output) {
       ggplot2::ggplot(data = activities_selected_graph(),
                       aes(x = activity_year_month,
                           y = total_distance,
-                          text = paste("Total Distance: ", total_distance,
-                                       "\nYear-Month: ", activity_year_month)
+                          text = paste("Year-Month: ", activity_year_month,
+                                       "\nDistance: ", total_distance,
+                                       "\nRides: ", total_rides)
                           )
                       ) +
         geom_col(fill = "blue") +
