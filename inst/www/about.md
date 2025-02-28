@@ -8,6 +8,6 @@
  
  
  
- This QR Code will open this app: ![](cyclestats_QR.jpg)
+ ![](cyclestats_QR.png)
  
  V0.72
