@@ -3,7 +3,7 @@ Title: Analysis of Cycling Rides
 Version: 0.0.0.9000
 Authors@R: 
     person("E.", "Simms", , "esimms@yahoo.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "0009-0009-1780-7533"))
 Description: Analysis of cycling rides.
 License: MIT + file LICENSE
 Encoding: UTF-8
