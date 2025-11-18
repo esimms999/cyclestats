@@ -2,13 +2,10 @@
 % Please edit documentation in R/cyclestatsApp.R
 \name{cyclestatsApp}
 \alias{cyclestatsApp}
-\title{Cycle Stats app standalone function}
+\title{Launch the CycleStats Shiny application}
 \usage{
 cyclestatsApp()
 }
-\value{
-shiny app
-}
 \description{
-Wrapper function for \code{shinyApp()}
+Launch the CycleStats Shiny application
 }

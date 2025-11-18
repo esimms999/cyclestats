@@ -1,0 +1,1019 @@
+ 1081  sudo apt update
+ 1082  systemctl status cron.service
+ 1083  docker ps
+ 1084  sudo apt update
+ 1085  sudo apt upgrade
+ 1086  sudo apt install qpdf
+ 1087  sudo apt update
+ 1088  sudo apt upgrade
+ 1089  docker ps
+ 1090  bbbbb run -d -it -e PASSWORD=temppass -e ROOT=TRUE -v /home/rstudio:/mnt/user/r/ -v /home/rstudio/custom-library:/mnt/user/appdata/rstudio -p 18001:8787 -p 18002:3838 rocker/tidyverse
+ 1091  docker ps -a
+ 1092  docker rm 9d1
+ 1093  docker rm 86a
+ 1094  docker rm 625
+ 1095  docker rm a28
+ 1096  docker ps -a
+ 1097  docker rm 4e8
+ 1098  docker ps -a
+ 1099  docker ps 
+ 1100  docker images
+ 1101  docker image rm 902, 565, 5f5
+ 1102  docker images
+ 1103  docker image rm 902 565
+ 1104  docker images
+ 1105  docker image rm 332 587
+ 1106  docker image rm 204
+ 1107  docker image rm e8a
+ 1108  docker image rm 132
+ 1109  docker images
+ 1110  docker image rm 78b
+ 1111  docker image rm 332
+ 1112  docker images
+ 1113  docker ps
+ 1114  docker stop 2ac
+ 1115  docker rm 2ac
+ 1116  docker image rm 565
+ 1117  docker images
+ 1118  docker image rm 587
+ 1119  docker image rm 332
+ 1120  docker rmi 587
+ 1121  docker rmi 332
+ 1122  docker ps -a
+ 1123  docker ps
+ 1124  sudo docker rmi 332
+ 1125  sudo docker rmi -f 332
+ 1126  docker ps
+ 1127  docker images
+ 1128  sudo docker rmi 587
+ 1129  docker images
+ 1130  run -d -it -e PASSWORD=temppass -e ROOT=TRUE -v /home/rstudio:/mnt/user/r/ -v /home/rstudio/custom-library:/mnt/user/appdata/rstudio -p 18001:8787 -p 18787:3838 rocker/tidyverse
+ 1131  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE -v /home/rstudio:/mnt/user/r/ -v /home/rstudio/custom-library:/mnt/user/appdata/rstudio -p 18001:8787 -p 18787:3838 rocker/tidyverse
+ 1132  docker images
+ 1133  docker ps
+ 1134  docker update --restart=unless-stopped 683
+ 1135  docker ps
+ 1136  docker stop 683
+ 1137  docker rm 683
+ 1138  ls -l /home/rstudio/
+ 1139  sudo ls -l /home/rstudio/
+ 1140  run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 18787:8787 rocker/tidyverse
+ 1141  sudo ls -l /home/rstudio/
+ 1142  sudo cd /home/rstudio/
+ 1143  su rstudio
+ 1144  whoami
+ 1145  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 18787:8787 rocker/tidyverse
+ 1146  docker ps
+ 1147  tailscale status
+ 1148  docker stop 852
+ 1149  docker rm 852
+ 1150  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 18001:8787 rocker/tidyverse
+ 1151  docker update --restart=unless-stopped 9d9
+ 1152  tailscale status
+ 1153  tailscale funnel status
+ 1154  docker ps
+ 1155  ip a
+ 1156  whoami
+ 1157  hostname
+ 1158  tailscale funnel status
+ 1159  tailscale status
+ 1160  docker ps
+ 1161  sudo tailscale status
+ 1162  sudo tailscale disable
+ 1163  sudo tailscale help
+ 1164  sudo tailscale down
+ 1165  sudo tailscale status
+ 1166  sudo tailscale update
+ 1167  sudo tailscale up
+ 1168  sudo tailscale status
+ 1169  tailscale funnel status
+ 1170  tailscale funnel 
+ 1171  tailscale funnel --bg 18001
+ 1172  sudo tailscale funnel --bg 18001
+ 1173  tailscale funnel status
+ 1174  docker ps
+ 1175  ip a
+ 1176  docker ps
+ 1177  sudo tailscale help
+ 1178  sudo tailscale login
+ 1179  tailscale funnel status
+ 1180  tailscale status
+ 1181  sudo tailscale logoff
+ 1182  sudo tailscale help
+ 1183  sudo tailscale logout
+ 1184  sudo tailscale login
+ 1185  tailscale status
+ 1186  tailscale funnel status
+ 1187  docker ps
+ 1188  ip a
+ 1189  sudo tailscale funnel --bg 18001
+ 1190  sudo tailscale --https=443 on
+ 1191  sudo tailscale funnel --bg 18001
+ 1192  sudo tailscale whois ubuntuserver
+ 1193  sudo tailscale whois=ubuntuserver
+ 1194  sudo tailscale --whois=ubuntuserver
+ 1195  sudo apt update
+ 1196  sudo apt upgrade
+ 1197  docker ps
+ 1198  ip a
+ 1199  docker ps
+ 1200  docker stop 9d9
+ 1201  docker start' 9d9
+ 1202  docker start 9d9
+ 1203  docker ps
+ 1204  sudo tailscale funnel --bg 18001
+ 1205  sudo tailscale --https=443 on
+ 1206  tailscale funnel status
+ 1207  sudo tailscale funnel status
+ 1208  sudo tailscale funnel --bg 18001
+ 1209  sudo tailscale --https=443 on
+ 1210  sudo tailscale --https=443 
+ 1211  sudo tailscale funnel --bg 18001
+ 1212  sudo tailscale funnel help
+ 1213  ifconfig -a
+ 1214  ifconfig -a |more
+ 1215  cd /etc/netplan/
+ 1216  ls -l
+ 1217  vi 00-installer-config.yaml 
+ 1218  sudo cp 00-installer-config.yaml backup.txt 
+ 1219  sudo vi 00-installer-config.yaml 
+ 1220  sudo netplan try
+ 1221  sudo vi 00-installer-config.yaml 
+ 1222  sudo netplan try
+ 1223  sudo vi 00-installer-config.yaml 
+ 1224  sudo netplan try
+ 1225  sudo vi 00-installer-config.yaml 
+ 1226  sudo netplan try
+ 1227  sudo vi 00-installer-config.yaml 
+ 1228  sudo netplan try
+ 1229  sudo vi 00-installer-config.yaml 
+ 1230  sudo netplan try
+ 1231  sudo netplan try | more
+ 1232  sudo vi 00-installer-config.yaml 
+ 1233  sudo netplan try | more
+ 1234  sudo vi 00-installer-config.yaml 
+ 1235  sudo netplan try | more
+ 1236  sudo vi 00-installer-config.yaml 
+ 1237  sudo netplan try | more
+ 1238  ls -l
+ 1239  sudo cp backup.txt 00-installer-config.yaml 
+ 1240  sudo vi 00-installer-config.yaml 
+ 1241  sudo netplan try | more
+ 1242  sudo vi 00-installer-config.yaml 
+ 1243  :q
+ 1244  ls -l
+ 1245  more backup.txt 
+ 1246  more 00-installer-config.yaml 
+ 1247  sudo netplan try | more
+ 1248  clear
+ 1249  ifconfig -a |more
+ 1250  sudo tailscale status
+ 1251  sudo tailscale funnel status
+ 1252  sudo tailscale funnel --bg 18001
+ 1253  ufw
+ 1254  ufw help
+ 1255  ufw status
+ 1256  sudo ufw status
+ 1257  sudo ufw enable
+ 1258  sudo ufw status
+ 1259  sudo ufw version
+ 1260  sudo ufw status verbose
+ 1261  sudo ufw status numbered
+ 1262  docker ps
+ 1263  sudo ufw status numbered
+ 1264  sudo ufw allow 18001/tcp
+ 1265  sudo ufw status numbered
+ 1266  ip a
+ 1267  sudo ufw allow 18001/https
+ 1268  sudo ufw allow 18001/http
+ 1269  sudo ufw deny 18001/https
+ 1270  sudo ufw deny 18001
+ 1271  sudo ufw status numbered
+ 1272  sudo ufw delete 4
+ 1273  sudo ufw status numbered
+ 1274  sudo ufw delete 3
+ 1275  sudo ufw delete 2
+ 1276  sudo ufw status numbered
+ 1277  sudo ufw allow https
+ 1278  sudo ufw allow http
+ 1279  sudo ufw status numbered
+ 1280  sudo ufw allow ssh
+ 1281  sudo ufw status numbered
+ 1282  sudo ufw allow 18001/http
+ 1283  sudo ufw allow 18001
+ 1284  sudo ufw status numbered
+ 1285  docker ps
+ 1286  vi ~/.bash-history
+ 1287  vi ~/.bash_history
+ 1288  history
+ 1289  history >> history.txt
+ 1290  history >> ~/history.txt
+ 1291  vi ~/history.txt 
+ 1292  sudo ufw status numbered
+ 1293  docker ps
+ 1294  sudo ufw status
+ 1295  su
+ 1296  sudo tailscale status
+ 1297  sudo tailscale help
+ 1298  sudo tailscale logout
+ 1299  sudo tailscale login
+ 1300  sudo tailscale status
+ 1301  sudo docker ps
+ 1302  sudo docker stop 9d9
+ 1303  sudo docker rm 9d9
+ 1304  sudo docker images
+ 1305  sudo docker image rm 8b7
+ 1306  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 18787:8787 rocker/tidyverse
+ 1307  sudo docker update --restart=unless-stopped 574
+ 1308  docker ps
+ 1309  ip a
+ 1310  sudo tailscale status
+ 1311  sudo tailscale funnel 
+ 1312  sudo tailscale funnel 18787
+ 1313  sudo tailscale --bg funnel 18787
+ 1314  cd
+ 1315  vi history.txt 
+ 1316  sudo tailscale funnel --bg 18787
+ 1317  sudo ufw status
+ 1318  sudo ufw help
+ 1319  sudo ufw status numbered
+ 1320  sudo ufw delete 1
+ 1321  sudo ufw delete 8
+ 1322  sudo ufw status numbered
+ 1323  sudo ufw delete 4
+ 1324  sudo ufw status numbered
+ 1325  sudo ufw help
+ 1326  sudo ufw disable
+ 1327  sudo ufw status numbered
+ 1328  ip
+ 1329  ip a
+ 1330  sudo ufw status numbered
+ 1331  sudo tailscale status
+ 1332  docker ps
+ 1333  sudo systemctl restart tailscaled
+ 1334  sudo tailscale status
+ 1335  sudo tailscale funnel status
+ 1336  sudo ufw status
+ 1337  sudo ufw enable
+ 1338  sudo ufw status
+ 1339  sudo ufw help
+ 1340  sudo ufw delete 1
+ 1341  sudo ufw status numbered
+ 1342  sudo ufw delete 3
+ 1343  sudo ufw status numbered
+ 1344  sudo ufw allow 443/tcp
+ 1345  sudo ufw status numbered
+ 1346  sudo ufw allow 18787/tcp
+ 1347  sudo ufw status numbered
+ 1348  sudo systemctl restart tailscaled
+ 1349  sudo ufw allow out 18787/tcp
+ 1350  sudo systemctl restart tailscaled
+ 1351  sudo ufw status numbered
+ 1352  sudo nano /etc/default/ufw
+ 1353  sudo ufw status numbered
+ 1354  sudo ufw allow out 80/tcp
+ 1355  sudo ufw allow out 443/tcp
+ 1356  sudo ufw status numbered
+ 1357  sudo systemctl restart tailscaled
+ 1358  sudo ufw status numbered
+ 1359  sudo tailscale status
+ 1360  sudo ufw allow out 22/tcp
+ 1361  sudo ufw status numbered
+ 1362  sudo ufw disable
+ 1363  sudo ufw enable
+ 1364  sudo ufw status numbered
+ 1365  sudo tailscale status
+ 1366  sudo tailscale funnel status
+ 1367  sudo ufw allow out 22/http
+ 1368  sudo ufw allow out 22/https
+ 1369  sudo tailscale status
+ 1370  sudo ufw allow 18789
+ 1371  sudo ufw status numbered
+ 1372  sudo ufw delete 9
+ 1373  sudo ufw status numbered
+ 1374  docker ps
+ 1375  sudo tailscale status
+ 1376  sudo ufw disable
+ 1377  docker stop 
+ 1378  sudo docker stop 574  
+ 1379  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 8787:8787 rocker/tidyverse
+ 1380  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio2 -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 8787:8787 rocker/tidyverse
+ 1381  docker ps
+ 1382  sudo docker stop 902
+ 1383  sudo docker rm 902
+ 1384  sudo docker start 574  
+ 1385  docker ps
+ 1386  sudo ufw status numbered
+ 1387  neofetch
+ 1388  sudo shutdown -r now
+ 1389  sudo ufw status numbered
+ 1390  docker ps
+ 1391  tailscale status
+ 1392  tailscale funnel status
+ 1393  docker ps
+ 1394  docker logs 574
+ 1395  docker logs 574 > logs574/logs
+ 1396  docker logs 574 > logs574.logs
+ 1397  vi logs574.logs 
+ 1398  rm logs574.logs 
+ 1399  docker ps
+ 1400  docker stop 574
+ 1401  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --net=host --name=rstudio2 -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 8787:8787 rocker/tidyverse
+ 1402  docker ps
+ 1403  docker stop 698
+ 1404  docker rm 698
+ 1405  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio2 -p 18787:8787 rocker/tidyverse
+ 1406  docker ps
+ 1407  psw
+ 1408  pwd
+ 1409  cd ..
+ 1410  ls -l
+ 1411  cd rstudio/
+ 1412  su rstudio
+ 1413  docker ps
+ 1414  docker stop 2c6
+ 1415  docker rm 2c6
+ 1416  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --restart=unless-stopped --name=rstudio -v /home/rstudio:/home/rstudio -p 8787:8787 rocker/tidyverse
+ 1417  docker rm 574
+ 1418  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --restart=unless-stopped --name=rstudio -v /home/rstudio:/home/rstudio -p 8787:8787 rocker/tidyverse
+ 1419  docker ps
+ 1420  docker stop c77
+ 1421  docker rm c77
+ 1422  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --restart=unless-stopped --name=rstudio -v /home/rstudio:/home/rstudio -p 18787:8787 rocker/tidyverse
+ 1423  docker ps
+ 1424  docker logs 799
+ 1425  docker ps
+ 1426  docker stop 799
+ 1427  docker rm 799
+ 1428  sudo cd ../
+ 1429  pwd
+ 1430  cd rstudio/
+ 1431  su
+ 1432  su rstudio
+ 1433  whoami
+ 1434  docker ps
+ 1435  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -v /home/rstudio/packages:/usr/local/lib/R -p 18787:8787 rocker/tidyverse
+ 1436  sudo docker ps
+ 1437  sudo docker stop ce7
+ 1438  sudo docker rm ce7
+ 1439  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -p 18787:8787 rocker/tidyverse
+ 1440  docker ps
+ 1441  sudo docker stop 85f
+ 1442  sudo docker rm 85f
+ 1443  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio:/home/rstudio -p 18787:8787 rocker/tidyverse
+ 1444  docker ps
+ 1445  pwd
+ 1446  ls a-l
+ 1447  ls -al
+ 1448  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio3 -v /home/rstudio/:/home/rstudio/ -p 18789:8787 rocker/tidyverse
+ 1449  ls -l
+ 1450  history > history.txt
+ 1451  sudo history > history.txt
+ 1452  cd eric
+ 1453  sudo history > history.txt
+ 1454  history > history.txt
+ 1455  vi history.txt 
+ 1456  egrep "docker run"  history.txt 
+ 1457  egrep "docker run"  history.txt  | egrep -i "rocker"
+ 1458  egrep "volume"  history.txt  
+ 1459  docker ps
+ 1460  cd ../rstudio/
+ 1461  ls -l
+ 1462  ls -l packages/
+ 1463  ls -l
+ 1464  docker ps
+ 1465  docker stop e5a
+ 1466  docker start e5a
+ 1467  docker stop e5a
+ 1468  docker rm e5a
+ 1469  docker ps
+ 1470  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio4 -v /home/rstudio/:/home/rstudio/ -p 18700:8787 rocker/tidyverse
+ 1471  docker stop 115
+ 1472  docker rm 115
+ 1473  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio5 -v /home/rstudio/:/home/rstudio/ -p 18701:8787 rocker/tidyverse
+ 1474  docker stop 69
+ 1475  docker rm 69
+ 1476  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio6 -v /home/rstudio/:/home/rstudio/ -v /home/rstudio/packages/:/usr/local/lib/R/site-library/ -p 18702:8787 rocker/tidyverse
+ 1477  docker stop 66
+ 1478  docker start 66
+ 1479  docker stop 66
+ 1480  docker rm 66
+ 1481  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio7 -v /home/rstudio/:/home/rstudio/ -v /home/rstudio/packages/:/usr/local/lib/R/site-library/ -p 18703:8787 rocker/tidyverse
+ 1482  docker ps
+ 1483  docker stop d77
+ 1484  docker rm d77
+ 1485  docker stop 6a
+ 1486  docker rm 6a
+ 1487  docker images
+ 1488  docker image rm 56e
+ 1489  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio/:/home/rstudio/ -v /home/rstudio/packages/:/usr/local/lib/R/site-library/ -p 18787:8787 rocker/tidyverse
+ 1490  docker ps
+ 1491  cd packages/
+ 1492  ls -l
+ 1493  docker ps
+ 1494  sudo apt update
+ 1495  sudo apt upgrade
+ 1496  sudo apt update
+ 1497  sudo apt upgrade
+ 1498  sudo apt update
+ 1499  sudo apt upgrade
+ 1500  sudo apt update
+ 1501  docker ps
+ 1502  docker ps -a
+ 1503  docker start daf
+ 1504  docker update --restart=unless-stopped
+ 1505  docker update --restart=unless-stopped daf
+ 1506  docker ps
+ 1507  docker stop daf
+ 1508  docker rm daf
+ 1509  sdocker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio/:/home/rstudio/ -v /home/rstudio/packages/:/usr/local/lib/R/site-library/ -p 18787:8787 rocker/tidyverse
+ 1510  docker images
+ 1511  docker image rm 56e
+ 1512  docker run -d -it -e PASSWORD=temppass -e ROOT=TRUE --name=rstudio -v /home/rstudio/:/home/rstudio/ -v /home/rstudio/packages/:/usr/local/lib/R/site-library/ -p 18787:8787 rocker/tidyverse
+ 1513  docker ps
+ 1514  docker update --restart=unless-stopped 82c
+ 1515  ip a
+ 1516  version
+ 1517  lsb-release -a
+ 1518  lsb_release -a
+ 1519  hostname
+ 1520  sudo apt update
+ 1521  sudo apt upgrade
+ 1522  exit
+ 1523  sudo apt update
+ 1524  sudo apt upgrade
+ 1525  sudo apt update
+ 1526  sudo apt upgrade
+ 1527  sudo apt update
+ 1528  sudo apt upgrade
+ 1529  docker ps
+ 1530  sudo tailscale funnel status
+ 1531  sudo apt update
+ 1532  sudo apt upgrade
+ 1533  ip a
+ 1534  docker ps
+ 1535  sudo apt update
+ 1536  sudo apt upgrade
+ 1537  sudo apt update
+ 1538  exit
+ 1539  sudo apt update
+ 1540  exit
+ 1541  sudo apt update
+ 1542  sudo apt upgrade
+ 1543  docker ps
+ 1544  sudo apt update
+ 1545  sudo apt upgrade
+ 1546  exit
+ 1547  sudo apt update
+ 1548  sudo apt upgrade
+ 1549  sudo apt update
+ 1550  sudo shutdown -r now
+ 1551  sudo apt update
+ 1552  docker ps
+ 1553  ip a
+ 1554  docker ps
+ 1555  sudo apt update
+ 1556  sudo apt upgrade
+ 1557  docker ps
+ 1558  sudo apt update
+ 1559  sudo apt upgrade
+ 1560  sudo apt update
+ 1561  sudo apt upgrade
+ 1562  sudo apt update
+ 1563  sudo apt upgrade
+ 1564  sudo apt update
+ 1565  sudo apt upgrade
+ 1566  shutdown now -R
+ 1567  shutdown now -r
+ 1568  docker ps
+ 1569  sudo apt update
+ 1570  sudo apt upgrade
+ 1571  shutdown now -r
+ 1572  sudo apt update
+ 1573  exit
+ 1574  sudo apt update
+ 1575  sudo apt upgrade
+ 1576  shutdown now -r
+ 1577  sudo apt update
+ 1578  sudo apt upgrade
+ 1579  exit
+ 1580  docker ps
+ 1581  docker ps -a
+ 1582  docker start 002
+ 1583  docker ps -a
+ 1584  sudo apt update
+ 1585  exit
+ 1586  sudo apt update
+ 1587  sudo apt upgrade
+ 1588  shutdown now -r
+ 1589  sudo apt update
+ 1590  sudo apt upgrade
+ 1591  sudo apt update
+ 1592  sudo apt upgrade
+ 1593  exit
+ 1594  sudo apt update
+ 1595  sudo apt upgrade
+ 1596  df
+ 1597  du
+ 1598  neofetch
+ 1599  exit
+ 1600  ip a
+ 1601  docker ps
+ 1602  docker pull ghcr.io/pharmaverse/docker_pharmaverse:v4.5.1
+ 1603  docker pull ghcr.io/pharmaverse/docker_pharmaverse:latest
+ 1604  sudo docker pull ghcr.io/pharmaverse/docker_pharmaverse:latest
+ 1605  sudo docker run -d -p 8787:18788 -e PASSWORD=temppass -v /home/eric/docker_pharmaverse:/home/rstudio/workspace docker_pharmaverse
+ 1606  sudo docker images
+ 1607  sudo docker run -d -p 8787:18788 -e PASSWORD=temppass -v /home/eric/docker_pharmaverse:/home/rstudio/workspace ghcr.io/pharmaverse/docker_pharmaverse
+ 1608  ip a
+ 1609  sudo docker ps
+ 1610  dfw
+ 1611  ufw
+ 1612  ufw status
+ 1613  sudo ufw status
+ 1614  sudo docker stop 6d4
+ 1615  sudo docker ps
+ 1616  sudo docker ps -a
+ 1617  sudo docker rm 6d4
+ 1618  sudo docker run -d -p 18788:8787 -e PASSWORD=temppass -v /home/eric/docker_pharmaverse:/home/rstudio/workspace ghcr.io/pharmaverse/docker_pharmaverse
+ 1619  ls -l
+ 1620  pwd
+ 1621  cd docker_pharmaverse/
+ 1622  ls -l
+ 1623  sudo docker ps
+ 1624  docker stop a22
+ 1625  sudo docker ps
+ 1626  sudo docker start a22
+ 1627  sudo docker ps
+ 1628  ls -l
+ 1629  pwd
+ 1630  ls -l
+ 1631  cd ..
+ 1632  ls -l
+ 1633  cd rstudio/
+ 1634  ls -l
+ 1635  cd ../docker_pharmaverse/
+ 1636  ls -l
+ 1637  cd ..
+ 1638  pwd
+ 1639  cd ..
+ 1640  pwd
+ 1641  ls -l
+ 1642  sudo find . -name "eric_test1.R"
+ 1643  sudo docker ps
+ 1644  sudo docker stop a22
+ 1645  sudo docker rm a22
+ 1646  sudo docker run -d -p 18788:8787 -e ROOT=TRUE -e PASSWORD=temppass -v /home/eric/docker_pharmaverse:/home/rstudio/workspace ghcr.io/pharmaverse/docker_pharmaverse
+ 1647  pwd
+ 1648  sudo find . -name "eric_test1.R"
+ 1649  sudo find . -name "ddd.R"
+ 1650  sudo docker ps
+ 1651  sudo docker stop f57
+ 1652  sudo docker rm f57
+ 1653  sudo docker run -d -p 18788:8787 -e ROOT=TRUE -e PASSWORD=temppass -v /home/eric/docker_pharmaverse/:/home/rstudio/ ghcr.io/pharmaverse/docker_pharmaverse
+ 1654  sudo docker ps
+ 1655  pwd
+ 1656  cd ~
+ 1657  pwd
+ 1658  ls -l
+ 1659  cd docker_pharmaverse/
+ 1660  ls -l
+ 1661  sudo docker stop 0e2
+ 1662  sudo docker rm 0e2
+ 1663  sudo docker run -d -p 18788:8787 -e ROOT=TRUE -e PASSWORD=temppass -v /home/eric/docker_pharmaverse/:/home/rstudio/workspace ghcr.io/pharmaverse/docker_pharmaverse
+ 1664  pwd
+ 1665  ls -l
+ 1666  cd ..
+ 1667  ls -l
+ 1668  cd ..
+ 1669  sudo find . -name "eee.R"
+ 1670  pwd
+ 1671  cd ~
+ 1672  ls -l
+ 1673  cd docker_pharmaverse/
+ 1674  ls -l
+ 1675  cd ../rstudio/
+ 1676  ls -l
+ 1677  sudo apt update
+ 1678  sudo apt upgrade
+ 1679  sudo docker ps
+ 1680  sudo docker stop 6d2
+ 1681  sudo docker rm 6d2
+ 1682  sudo docker images
+ 1683  sudo docker image rm 21f
+ 1684  sudo docker images
+ 1685  sudo docker ps -a
+ 1686  exit
+ 1687  sudo docker ps -a
+ 1688  history
+ 1689  history | grep openspeedtest
+ 1690  docker images
+ 1691  docker ps
+ 1692  docker stop aa5
+ 1693  docker rm aa5
+ 1694  docker image rm 7d7
+ 1695  history | grep openspeedtest
+ 1696  sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
+ 1697  docker ps
+ 1698  ip a
+ 1699  ls -l
+ 1700  history
+ 1701  ls -l
+ 1702  sudo docker ps
+ 1703  sudo apt update
+ 1704  sudo apt upgrade
+ 1705  sudo apt update
+ 1706  sudo apt upgrade
+ 1707  sudo apt update
+ 1708  sudo apt upgrade
+ 1709  docker ps
+ 1710  sudo apt update
+ 1711  sudo apt upgrade
+ 1712  docker ps
+ 1713  find . -name cyclestats_app
+ 1714  cd ..
+ 1715  find . -name cyclestats_app
+ 1716  sudo find . -name cyclestats_app
+ 1717  cd ~
+ 1718  pwd
+ 1719  ls -al
+ 1720  cd rstudio/
+ 1721  ls -al
+ 1722  cd /home/rstudio/
+ 1723  ls -l
+ 1724  cd cyclestats_app/
+ 1725  ls -l
+ 1726  docker build -t cyclestats-shiny .
+ 1727  clear
+ 1728  docker build --no-cache -t cyclestats-shiny .
+ 1729  clear
+ 1730  docker build -t cyclestats-shiny .
+ 1731  clear
+ 1732  docker build -t cyclestats-shiny .
+ 1733  clear
+ 1734  docker build -t cyclestats-shiny .
+ 1735  clear
+ 1736  docker build -t cyclestats-shiny .
+ 1737  clear
+ 1738  docker build --no-cache -t cyclestats-shiny .
+ 1739  clear
+ 1740  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1741  clear
+ 1742  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1743  clear
+ 1744  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1745  clear
+ 1746  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1747  clear
+ 1748  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1749  clear
+ 1750  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1751  docker ps
+ 1752  docker run -p 3838:3838 cyclestats-shiny
+ 1753  docker ps
+ 1754  docker run -d -p 3838:3838 cyclestats-shiny
+ 1755  docker ps
+ 1756  ip a
+ 1757  docker ps
+ 1758  docker exec a87 /bin/bash
+ 1759  docker exec -it a87 /bin/bash
+ 1760  docker logs a87 --tail 50
+ 1761  clear
+ 1762  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1763  ls -l
+ 1764  docker ps
+ 1765  docker stop a87
+ 1766  docker rm a87
+ 1767  docker images
+ 1768  clear
+ 1769  docker run -d -p 3838:3838 cyclestats-shiny
+ 1770  docker ps
+ 1771  docker logs [4~ --tail 50
+ 1772  docker logs 011 --tail 50
+ 1773  clear
+ 1774  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1775  docker ps
+ 1776  docker stop 011
+ 1777  docker rm 011
+ 1778  docker images
+ 1779  docker run -d -p 3838:3838 cyclestats-shiny
+ 1780  docker logs a33 --tail 50
+ 1781  docker logs a33 --tail 50 > temp.log
+ 1782  docker ps
+ 1783  docker stop a33
+ 1784  docker rm a33
+ 1785  docker images
+ 1786  docker image rm 9c dd 4a
+ 1787  docker ps -a
+ 1788  docker rm 0cf
+ 1789  docker image rm 9c dd 4a
+ 1790  docker images
+ 1791  clear
+ 1792  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1793  docker images
+ 1794  docker run -d -p 3838:3838 cyclestats-shiny
+ 1795  docker logs 292 --tail 50 > temp.log
+ 1796  docker ps
+ 1797  docker stop 292
+ 1798  docker rm 292
+ 1799  docker ps
+ 1800  docker run -d -p 3838:3838 cyclestats-shiny
+ 1801  docker ps
+ 1802  docker logs 292 --tail 50 
+ 1803  docker logs 1c8 --tail 50 
+ 1804  docker logs 1c8 --tail 50 > temp.log
+ 1805  docker ps
+ 1806  docker stop 1c8
+ 1807  docker rm1c8
+ 1808  docker rm 1c8
+ 1809  docker images
+ 1810  docker rm image f97
+ 1811  docker rm image cyclestats-shiny
+ 1812  docker image rm f97
+ 1813  docker images
+ 1814  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1815  docker ps
+ 1816  docker images
+ 1817  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1818  clear
+ 1819  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1820  docker ps
+ 1821  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1822  docker ps
+ 1823  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1824  docker ps
+ 1825  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1826  docker ps
+ 1827  docker images
+ 1828  docker run -d -p 3838:3838 cyclestats-shiny
+ 1829  docker ps
+ 1830  docker logs 1c8 --tail 50 > temp.log
+ 1831  docker ps
+ 1832  docker logs e02 --tail 50 > temp.log
+ 1833  more temp.log 
+ 1834  ip a
+ 1835  docker ps
+ 1836  ls -l /var/l
+ 1837  docker ps
+ 1838  docker exec -d e02 /bin/bash
+ 1839  docker ps
+ 1840  docker stop e02
+ 1841  docker rm e02
+ 1842  docker images
+ 1843  docker run -d -p 3838:3838 cyclestats-shiny
+ 1844  docker ps
+ 1845  docker logs 912 --tail 20
+ 1846  docker exec -d 912 /bin/bash
+ 1847  docker exec -d -it 912 /bin/bash
+ 1848  docker exec -it 912 /bin/bash
+ 1849  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1850  docker ps
+ 1851  docker stop 912
+ 1852  docker rm 912
+ 1853  docker images
+ 1854  docker ps
+ 1855  docker run -d -p 3838:3838 cyclestats-shiny
+ 1856  docker ps
+ 1857  docker logs eb6 --tail 20
+ 1858  docker logs eb6 --tail 50
+ 1859  clear
+ 1860  docker logs eb6 --tail 50
+ 1861  cd /var/log/
+ 1862  ls -l
+ 1863  docker exec -it 912 /bin/bash
+ 1864  docker ps
+ 1865  docker exec -it eb6 /bin/bash
+ 1866  docker exec eb6 Rscript /srv/shiny-server/cyclestats/app.R
+ 1867  exit
+ 1868  cd rstudio/
+ 1869  ls -l
+ 1870  pwd
+ 1871  docker images
+ 1872  docker ps
+ 1873  cd ~
+ 1874  pwd
+ 1875  cd ..
+ 1876  find . -name docker-build.log
+ 1877  sudo
+ 1878  su
+ 1879  su root
+ 1880  cd
+ 1881  pwd
+ 1882  docker ps
+ 1883  find . -name cyclestats_app
+ 1884  cd ..
+ 1885  find . -name cyclestats_app
+ 1886  su find . -name cyclestats_app
+ 1887  sudo find . -name cyclestats_app
+ 1888  cd /home/rstudio/cyclestats
+ 1889  ls -l
+ 1890  pwd
+ 1891  sudo find . -name docker-build.log
+ 1892  pwd
+ 1893  cd ..
+ 1894  sudo find . -name docker-build.log
+ 1895  cd /home/rstudio/cyclestats_app/
+ 1896  ls -l
+ 1897  more app.R
+ 1898  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1899  docker ps
+ 1900  docker stop eb6
+ 1901  docker rm eb6
+ 1902  docker images
+ 1903  docker ps -a
+ 1904  docker image rm 6e6
+ 1905  docker image rm 4ca
+ 1906  docker images
+ 1907  docker run -d -p 3838:3838 cyclestats-shiny
+ 1908  docker ps -a
+ 1909  docker exec eb6 /bin/bash
+ 1910  docker ps -a
+ 1911  docker exec 609 /bin/bash
+ 1912  pwd
+ 1913  docker ps
+ 1914  docker exec -d -it 609 /bin/bash
+ 1915  docker exec -d 609 /bin/bash
+ 1916  sudo docker exec -d 609 /bin/bash
+ 1917  docker exec eb6 Rscript /srv/shiny-server/cyclestats/app.R
+ 1918  docker exec 6098 Rscript /srv/shiny-server/cyclestats/app.R
+ 1919  docker ps
+ 1920  docker stop 609
+ 1921  docker rm 609
+ 1922  docker ps -a
+ 1923  docker images
+ 1924  docker image rm e57
+ 1925  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1926  docker ps -a
+ 1927  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1928  docker ps -a
+ 1929  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1930  docker ps
+ 1931  docker ps -a
+ 1932  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1933  docker ps
+ 1934  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1935  docker ps
+ 1936  docker run -d -p 3838:3838 cyclestats-shiny
+ 1937  docker ps
+ 1938  docker exec eb6 Rscript /srv/shiny-server/cyclestats/app.R
+ 1939  docker exec d8a Rscript /srv/shiny-server/cyclestats/app.R
+ 1940  docker ps
+ 1941  docker stop d8a
+ 1942  docker rm d8a
+ 1943  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1944  docker ps
+ 1945  docker run -d -p 3838:3838 cyclestats-shiny
+ 1946  docker ps
+ 1947  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1948  docker ps
+ 1949  docker logs 51e --tail 50
+ 1950  docker logs 51e --tail 50 > temp.log
+ 1951  docker ps
+ 1952  docker stop 51e
+ 1953  docker rm 51e
+ 1954  docker images
+ 1955  docker image rm 396
+ 1956  docker image rm 193
+ 1957  docker image rm 8b8
+ 1958  docker image rm 32b
+ 1959  docker images
+ 1960  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1961  docker ps
+ 1962  docker run -d -p 3838:3838 cyclestats-shiny
+ 1963  docker ps
+ 1964  docker logs b37 --tail 50 > temp.log
+ 1965  docker exec -it b37 /bin/bash
+ 1966  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1967  docker ps
+ 1968  docker stop b37
+ 1969  docker rm b37
+ 1970  docker images
+ 1971  docker image rm af4
+ 1972  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1973  docker ps
+ 1974  docker run -d -p 3838:3838 cyclestats-shiny
+ 1975  docker ps
+ 1976  docker logs 35d --tail 50 > temp.log
+ 1977  docker exec -it 35d /bin/bash
+ 1978  docker ps
+ 1979  docker stop 35d
+ 1980  docker rm 35d
+ 1981  docker images
+ 1982  docker image rm c02
+ 1983  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 1984  docker ps
+ 1985  docker run -d -p 3838:3838 cyclestats-shiny
+ 1986  docker ps
+ 1987  docker logs eb0 --tail 50 > temp.log
+ 1988  docker ps
+ 1989  docker exec -it eb0 /bin/bash
+ 1990  docker exec eb0 Rscript /srv/shiny-server/cyclestats/app.R
+ 1991  docker r exec wb0 Rscript /srv/shiny-server/cyclestats/app.R
+ 1992  docker r exec eb0 Rscript /srv/shiny-server/cyclestats/app.R
+ 1993  docker exec eb0 Rscript /srv/shiny-server/cyclestats/app.R
+ 1994  docker exec -d -it eb0 /bin/bash
+ 1995  ls -l /var/log/
+ 1996  exit
+ 1997  cd /home/rstudio/cyclestats_app/
+ 1998  ls -l
+ 1999  docker ps
+ 2000  docker exec -d -it eb0 /bin/bash
+ 2001  docker exec -d -it eb0e /bin/bash
+ 2002  docker ps
+ 2003  docker exec -d -it eb0e /bin/bash
+ 2004  docker stop eb0
+ 2005  docker rm eb0
+ 2006  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 2007  docker images
+ 2008  docker image rm 2aff
+ 2009  docker images
+ 2010  docker ps
+ 2011  docker run -d -p 3838:3838 cyclestats-shiny
+ 2012  docker ps
+ 2013  docker logs eb0 --tail 50 > temp.log
+ 2014  docker ps
+ 2015  docker logs 586 --tail 50 > temp.log
+ 2016  docker exec 586 Rscript /srv/shiny-server/cyclestats/app.R
+ 2017  docker exec 586 ls -l /var/log/shiny-server
+ 2018  docker exec -it 586 ls -l /var/log/shiny-server
+ 2019  docker exec -it 586  /var/log/shiny-server
+ 2020  docker exec -it 586  ls -l /var/log/shiny-server
+ 2021  docker exec -it 586  ls /var/log/shiny-server
+ 2022  docker exec -it 586  /bin/bash
+ 2023  docker ps
+ 2024  docker exec 586 Rscript /srv/shiny-server/cyclestats/app.R
+ 2025  docker exec 586 more /srv/log/shiny-server
+ 2026  cd  /srv/log/shiny-server
+ 2027  ls -l /srv/log/shiny-server
+ 2028  sudo ls -l /srv/log/shiny-server
+ 2029  sudo ls -l /var/log/shiny-server
+ 2030  docker ps
+ 2031  docker exec 586 ls /srv/log/shiny-server
+ 2032  docker exec 586 ls /var/log/shiny-server
+ 2033  docker ps
+ 2034  docker logs 586 --tail 50 > temp.log
+ 2035  docker ps
+ 2036  docker stop 586
+ 2037  docker rm 586
+ 2038  docker images
+ 2039  docker image rm a2c
+ 2040  docker ps
+ 2041  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 2042  docker ps
+ 2043  docker run -d -p 3838:3838 cyclestats-shiny
+ 2044  docker ps
+ 2045  docker logs bc9 --tail 50 > temp.log
+ 2046  docker exec bc9 ls -la /var/log/shiny-server/
+ 2047  docker exec bc9 tail -n 50 /var/log/shiny-server.log
+ 2048  docker exec bc9 tail -n 50 /var/log/shiny-server/shiny-server.log
+ 2049  docker exec bc9 Rscript -e 'setwd('/srv/shiny-server/cyclestats'); source('app.R')
+
+
+ 2050  docker exec bc9 Rscript -e 'setwd('/srv/shiny-server/cyclestats'); source('app.R')
+
+
+
+docker exec bc9 Rscript -e "setwd('/srv/shiny-server/cyclestats'); source('app.R')"
+
+
+
+docker exec bc9 Rscript -e 'setwd('/srv/shiny-server/cyclestats'); source('app.R')
+ 2051  docker exec bc9 Rscript -e "setwd('/srv/shiny-server/cyclestats'); source('app.R')"
+ 2052  docker exec bc9 chown -R shiny:shiny /srv/shiny-server/cyclestats
+ 2053  docker ps
+ 2054  docker exec bc9 Rscript -e "setwd('/srv/shiny-server/cyclestats'); source('app.R')"
+ 2055  docker exec bc9 tail -n 50 /var/log/shiny-server/shiny-server.log
+ 2056  docker exec bc9 ls0 /var/log/shiny-server
+ 2057  docker exec bc9 ls /var/log/shiny-server
+ 2058  docker exec bc9 /bin/bash
+ 2059  docker ps
+ 2060  docker exec -it bc9 basjh -c "cd /srv/sshiny-server/cyclestats && R -e 'library(cyclestats); print(exists(\"available_years\"))
+
+docker exec -it bc9 basjh -c "cd /srv/sshiny-server/cyclestats && R -e 'library(cyclestats); print(exists(\"available_years\")); print(exists(\"cyclestats_ui\"); print(exists(\"cyclestats_ui\"; print(exists(\"cyclestats_server\"))'"
+
+
+docker exec bc9 tail -n 50 /var/log/shiny-server/shiny-server.log
+docker ps
+
+exit
+docker ps
+ 2061  docker ps
+ 2062  docker exec -it bc9 bash -c "cd /srv/shiny-server/cyclestats && R -e 'library(cyclestats); print(exists(\"available_years\")); print(exists(\"cyclestats_ui\")); print(exists(\"cyclestats_server\"))'"
+ 2063  docker ps
+ 2064  docker stop bc9
+ 2065  docker rm bc9
+ 2066  docker images
+ 2067  docker image rm 35d
+ 2068  docker images
+ 2069  docker build --no-cache --progress=plain -t cyclestats-shiny . > docker-build.log 2>&1
+ 2070  docker ps
+ 2071  docker run -d -p 3838:3838 cyclestats-shiny
+ 2072  docker ps
+ 2073  docker exec -it  bash -c "cd /srv/shiny-server/cyclestats && R -e 'library(cyclestats); print(exists(\"available_years\")); print(exists(\"cyclestats_ui\")); print(exists(\"cyclestats_server\"))'"
+ 2074  docker exec -it 477 bash -c "cd /srv/shiny-server/cyclestats && R -e 'library(cyclestats); print(exists(\"available_years\")); print(exists(\"cyclestats_ui\")); print(exists(\"cyclestats_server\"))'"
+ 2075  docker ps
+ 2076  docker exec 477 /bin/bash
+ 2077  docker exec -it 477 /bin/bash
+ 2078  history
+ 2079  history | more
+ 2080  history > history.txt

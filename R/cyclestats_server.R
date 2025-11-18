@@ -6,6 +6,7 @@
 #' @importFrom DT renderDT
 #' @rawNamespace import(plotly, except = last_plot)
 #' @return `server` argument in `cyclestatsApp()`
+#' @export
 
 cyclestats_server <- function(input, output) {
 

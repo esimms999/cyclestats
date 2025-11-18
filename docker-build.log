@@ -1,0 +1,456 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 796B done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/rocker/shiny:4.4.1
+#2 ...
+
+#3 [auth] rocker/shiny:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/rocker/shiny:4.4.1
+#2 DONE 0.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context:
+#4 transferring context: 151B done
+#4 DONE 0.7s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/rocker/shiny:4.4.1@sha256:c50810df4747090eceb2f94da767ad27ad92dc78f96440577cfb8dbe46431026
+#6 DONE 0.0s
+
+#6 [1/5] FROM docker.io/rocker/shiny:4.4.1@sha256:c50810df4747090eceb2f94da767ad27ad92dc78f96440577cfb8dbe46431026
+#6 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 6.21kB done
+#5 DONE 1.0s
+
+#7 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends     libcurl4-openssl-dev libssl-dev libxml2-dev libgit2-dev     libfreetype6-dev libpng-dev libjpeg-dev libcairo2-dev libharfbuzz-dev libfribidi-dev     && rm -rf /var/lib/apt/lists/*
+#7 1.410 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#7 1.483 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#7 1.572 Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [60.9 kB]
+#7 1.618 Get:4 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1,289 kB]
+#7 1.643 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#7 1.688 Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#7 1.726 Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#7 1.736 Get:8 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5,988 kB]
+#7 1.891 Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3,532 kB]
+#7 2.000 Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1,792 kB]
+#7 2.016 Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#7 2.018 Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#7 2.019 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,594 kB]
+#7 2.030 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [69.2 kB]
+#7 2.031 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [6,188 kB]
+#7 2.098 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3,864 kB]
+#7 2.136 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+#7 2.136 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.9 kB]
+#7 3.401 Fetched 43.1 MB in 2s (20.8 MB/s)
+#7 3.401 Reading package lists...
+#7 4.073 Reading package lists...
+#7 4.710 Building dependency tree...
+#7 4.855 Reading state information...
+#7 4.986 libcairo2-dev is already the newest version (1.16.0-5ubuntu2).
+#7 4.986 libpng-dev is already the newest version (1.6.37-3build5).
+#7 4.986 libpng-dev set to manually installed.
+#7 4.986 The following additional packages will be installed:
+#7 4.986   gir1.2-glib-2.0 gir1.2-harfbuzz-0.0 icu-devtools libcurl4 libfreetype-dev
+#7 4.986   libfreetype6 libgirepository-1.0-1 libgit2-1.1 libgraphite2-dev
+#7 4.986   libharfbuzz-gobject0 libharfbuzz-icu0 libharfbuzz0b libhttp-parser-dev
+#7 4.986   libhttp-parser2.9 libicu-dev libjpeg8-dev libmbedcrypto7 libmbedtls-dev
+#7 4.987   libmbedtls14 libmbedx509-1 libssh2-1 libssh2-1-dev libssl3 libxml2
+#7 4.987 Suggested packages:
+#7 4.987   libcurl4-doc libidn11-dev libkrb5-dev libldap2-dev librtmp-dev freetype2-doc
+#7 4.987   libgraphite2-utils icu-doc libmbedtls-doc libssl-doc
+#7 5.049 The following NEW packages will be installed:
+#7 5.049   gir1.2-glib-2.0 gir1.2-harfbuzz-0.0 icu-devtools libfribidi-dev
+#7 5.049   libgirepository-1.0-1 libgit2-1.1 libgit2-dev libgraphite2-dev
+#7 5.049   libharfbuzz-dev libharfbuzz-gobject0 libharfbuzz-icu0 libhttp-parser-dev
+#7 5.049   libhttp-parser2.9 libicu-dev libjpeg-dev libjpeg8-dev libmbedcrypto7
+#7 5.050   libmbedtls-dev libmbedtls14 libmbedx509-1 libssh2-1 libssh2-1-dev libssl-dev
+#7 5.050   libxml2-dev
+#7 5.050 The following packages will be upgraded:
+#7 5.050   libcurl4 libcurl4-openssl-dev libfreetype-dev libfreetype6 libfreetype6-dev
+#7 5.051   libharfbuzz0b libssl3 libxml2
+#7 10.27 8 upgraded, 24 newly installed, 0 to remove and 85 not upgraded.
+#7 10.27 Need to get 23.1 MB of archives.
+#7 10.27 After this operation, 78.8 MB of additional disk space will be used.
+#7 10.27 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssl3 amd64 3.0.2-0ubuntu1.20 [1,905 kB]
+#7 11.04 Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgirepository-1.0-1 amd64 1.72.0-1 [55.6 kB]
+#7 11.04 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 gir1.2-glib-2.0 amd64 1.72.0-1 [164 kB]
+#7 11.05 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxml2 amd64 2.9.13+dfsg-1ubuntu0.10 [764 kB]
+#7 11.07 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreetype-dev amd64 2.11.1+dfsg-1ubuntu0.3 [555 kB]
+#7 11.09 Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreetype6-dev amd64 2.11.1+dfsg-1ubuntu0.3 [8,298 B]
+#7 11.09 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreetype6 amd64 2.11.1+dfsg-1ubuntu0.3 [388 kB]
+#7 11.13 Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz0b amd64 2.7.4-1ubuntu3.2 [353 kB]
+#7 11.15 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gir1.2-harfbuzz-0.0 amd64 2.7.4-1ubuntu3.2 [31.6 kB]
+#7 11.15 Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 icu-devtools amd64 70.1-2 [197 kB]
+#7 11.15 Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4-openssl-dev amd64 7.81.0-1ubuntu1.21 [386 kB]
+#7 11.22 Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.21 [290 kB]
+#7 11.23 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfribidi-dev amd64 1.0.8-2ubuntu3.1 [64.8 kB]
+#7 11.23 Get:14 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libhttp-parser2.9 amd64 2.9.4-4 [21.5 kB]
+#7 11.23 Get:15 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedcrypto7 amd64 2.28.0-1build1 [204 kB]
+#7 11.23 Get:16 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedx509-1 amd64 2.28.0-1build1 [47.2 kB]
+#7 11.32 Get:17 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedtls14 amd64 2.28.0-1build1 [82.7 kB]
+#7 11.32 Get:18 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1 amd64 1.10.0-3 [109 kB]
+#7 11.32 Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgit2-1.1 amd64 1.1.0+dfsg.1-4.1ubuntu0.1 [457 kB]
+#7 11.33 Get:20 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgraphite2-dev amd64 1.3.14-1build2 [14.7 kB]
+#7 11.33 Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz-icu0 amd64 2.7.4-1ubuntu3.2 [5,890 B]
+#7 11.41 Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz-gobject0 amd64 2.7.4-1ubuntu3.2 [26.0 kB]
+#7 11.41 Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 libicu-dev amd64 70.1-2 [11.6 MB]
+#7 11.73 Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz-dev amd64 2.7.4-1ubuntu3.2 [554 kB]
+#7 11.73 Get:25 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8-dev amd64 8c-2ubuntu10 [1,476 B]
+#7 11.73 Get:26 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-dev amd64 8c-2ubuntu10 [1,472 B]
+#7 11.74 Get:27 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedtls-dev amd64 2.28.0-1build1 [629 kB]
+#7 11.77 Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssl-dev amd64 3.0.2-0ubuntu1.20 [2,376 kB]
+#7 11.82 Get:29 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1-dev amd64 1.10.0-3 [243 kB]
+#7 11.82 Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxml2-dev amd64 2.9.13+dfsg-1ubuntu0.10 [804 kB]
+#7 11.88 Get:31 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libhttp-parser-dev amd64 2.9.4-4 [20.4 kB]
+#7 11.88 Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgit2-dev amd64 1.1.0+dfsg.1-4.1ubuntu0.1 [764 kB]
+#7 12.16 debconf: delaying package configuration, since apt-utils is not installed
+#7 12.27 Fetched 23.1 MB in 7s (3,379 kB/s)
+#7 12.73 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 27901 files and directories currently installed.)
+#7 12.74 Preparing to unpack .../libssl3_3.0.2-0ubuntu1.20_amd64.deb ...
+#7 13.21 Unpacking libssl3:amd64 (3.0.2-0ubuntu1.20) over (3.0.2-0ubuntu1.18) ...
+#7 14.81 Setting up libssl3:amd64 (3.0.2-0ubuntu1.20) ...
+#7 14.99 debconf: unable to initialize frontend: Dialog
+#7 14.99 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 14.99 debconf: falling back to frontend: Readline
+#7 15.59 Selecting previously unselected package libgirepository-1.0-1:amd64.
+#7 15.59 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 27901 files and directories currently installed.)
+#7 15.60 Preparing to unpack .../00-libgirepository-1.0-1_1.72.0-1_amd64.deb ...
+#7 15.69 Unpacking libgirepository-1.0-1:amd64 (1.72.0-1) ...
+#7 16.12 Selecting previously unselected package gir1.2-glib-2.0:amd64.
+#7 16.12 Preparing to unpack .../01-gir1.2-glib-2.0_1.72.0-1_amd64.deb ...
+#7 16.21 Unpacking gir1.2-glib-2.0:amd64 (1.72.0-1) ...
+#7 16.77 Preparing to unpack .../02-libxml2_2.9.13+dfsg-1ubuntu0.10_amd64.deb ...
+#7 17.04 Unpacking libxml2:amd64 (2.9.13+dfsg-1ubuntu0.10) over (2.9.13+dfsg-1ubuntu0.4) ...
+#7 17.70 Preparing to unpack .../03-libfreetype-dev_2.11.1+dfsg-1ubuntu0.3_amd64.deb ...
+#7 17.93 Unpacking libfreetype-dev:amd64 (2.11.1+dfsg-1ubuntu0.3) over (2.11.1+dfsg-1ubuntu0.2) ...
+#7 21.18 Preparing to unpack .../04-libfreetype6-dev_2.11.1+dfsg-1ubuntu0.3_amd64.deb ...
+#7 21.41 Unpacking libfreetype6-dev:amd64 (2.11.1+dfsg-1ubuntu0.3) over (2.11.1+dfsg-1ubuntu0.2) ...
+#7 22.06 Preparing to unpack .../05-libfreetype6_2.11.1+dfsg-1ubuntu0.3_amd64.deb ...
+#7 22.32 Unpacking libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.3) over (2.11.1+dfsg-1ubuntu0.2) ...
+#7 22.86 Preparing to unpack .../06-libharfbuzz0b_2.7.4-1ubuntu3.2_amd64.deb ...
+#7 23.18 Unpacking libharfbuzz0b:amd64 (2.7.4-1ubuntu3.2) over (2.7.4-1ubuntu3.1) ...
+#7 24.02 Selecting previously unselected package gir1.2-harfbuzz-0.0:amd64.
+#7 24.02 Preparing to unpack .../07-gir1.2-harfbuzz-0.0_2.7.4-1ubuntu3.2_amd64.deb ...
+#7 24.16 Unpacking gir1.2-harfbuzz-0.0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 24.78 Selecting previously unselected package icu-devtools.
+#7 24.78 Preparing to unpack .../08-icu-devtools_70.1-2_amd64.deb ...
+#7 24.87 Unpacking icu-devtools (70.1-2) ...
+#7 25.31 Preparing to unpack .../09-libcurl4-openssl-dev_7.81.0-1ubuntu1.21_amd64.deb ...
+#7 25.56 Unpacking libcurl4-openssl-dev:amd64 (7.81.0-1ubuntu1.21) over (7.81.0-1ubuntu1.18) ...
+#7 26.71 Preparing to unpack .../10-libcurl4_7.81.0-1ubuntu1.21_amd64.deb ...
+#7 27.01 Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.21) over (7.81.0-1ubuntu1.18) ...
+#7 27.70 Selecting previously unselected package libfribidi-dev:amd64.
+#7 27.70 Preparing to unpack .../11-libfribidi-dev_1.0.8-2ubuntu3.1_amd64.deb ...
+#7 27.78 Unpacking libfribidi-dev:amd64 (1.0.8-2ubuntu3.1) ...
+#7 28.27 Selecting previously unselected package libhttp-parser2.9:amd64.
+#7 28.27 Preparing to unpack .../12-libhttp-parser2.9_2.9.4-4_amd64.deb ...
+#7 28.35 Unpacking libhttp-parser2.9:amd64 (2.9.4-4) ...
+#7 28.92 Selecting previously unselected package libmbedcrypto7:amd64.
+#7 28.92 Preparing to unpack .../13-libmbedcrypto7_2.28.0-1build1_amd64.deb ...
+#7 29.08 Unpacking libmbedcrypto7:amd64 (2.28.0-1build1) ...
+#7 29.82 Selecting previously unselected package libmbedx509-1:amd64.
+#7 29.83 Preparing to unpack .../14-libmbedx509-1_2.28.0-1build1_amd64.deb ...
+#7 29.90 Unpacking libmbedx509-1:amd64 (2.28.0-1build1) ...
+#7 30.44 Selecting previously unselected package libmbedtls14:amd64.
+#7 30.44 Preparing to unpack .../15-libmbedtls14_2.28.0-1build1_amd64.deb ...
+#7 30.54 Unpacking libmbedtls14:amd64 (2.28.0-1build1) ...
+#7 31.07 Selecting previously unselected package libssh2-1:amd64.
+#7 31.07 Preparing to unpack .../16-libssh2-1_1.10.0-3_amd64.deb ...
+#7 31.15 Unpacking libssh2-1:amd64 (1.10.0-3) ...
+#7 31.50 Selecting previously unselected package libgit2-1.1:amd64.
+#7 31.50 Preparing to unpack .../17-libgit2-1.1_1.1.0+dfsg.1-4.1ubuntu0.1_amd64.deb ...
+#7 31.62 Unpacking libgit2-1.1:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+#7 32.02 Selecting previously unselected package libgraphite2-dev:amd64.
+#7 32.02 Preparing to unpack .../18-libgraphite2-dev_1.3.14-1build2_amd64.deb ...
+#7 32.10 Unpacking libgraphite2-dev:amd64 (1.3.14-1build2) ...
+#7 32.78 Selecting previously unselected package libharfbuzz-icu0:amd64.
+#7 32.78 Preparing to unpack .../19-libharfbuzz-icu0_2.7.4-1ubuntu3.2_amd64.deb ...
+#7 32.85 Unpacking libharfbuzz-icu0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 33.37 Selecting previously unselected package libharfbuzz-gobject0:amd64.
+#7 33.37 Preparing to unpack .../20-libharfbuzz-gobject0_2.7.4-1ubuntu3.2_amd64.deb ...
+#7 33.44 Unpacking libharfbuzz-gobject0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 33.80 Selecting previously unselected package libicu-dev:amd64.
+#7 33.80 Preparing to unpack .../21-libicu-dev_70.1-2_amd64.deb ...
+#7 33.90 Unpacking libicu-dev:amd64 (70.1-2) ...
+#7 34.68 Selecting previously unselected package libharfbuzz-dev:amd64.
+#7 34.69 Preparing to unpack .../22-libharfbuzz-dev_2.7.4-1ubuntu3.2_amd64.deb ...
+#7 34.87 Unpacking libharfbuzz-dev:amd64 (2.7.4-1ubuntu3.2) ...
+#7 35.50 Selecting previously unselected package libjpeg8-dev:amd64.
+#7 35.50 Preparing to unpack .../23-libjpeg8-dev_8c-2ubuntu10_amd64.deb ...
+#7 35.57 Unpacking libjpeg8-dev:amd64 (8c-2ubuntu10) ...
+#7 35.95 Selecting previously unselected package libjpeg-dev:amd64.
+#7 35.95 Preparing to unpack .../24-libjpeg-dev_8c-2ubuntu10_amd64.deb ...
+#7 36.02 Unpacking libjpeg-dev:amd64 (8c-2ubuntu10) ...
+#7 36.43 Selecting previously unselected package libmbedtls-dev:amd64.
+#7 36.44 Preparing to unpack .../25-libmbedtls-dev_2.28.0-1build1_amd64.deb ...
+#7 36.51 Unpacking libmbedtls-dev:amd64 (2.28.0-1build1) ...
+#7 36.89 Selecting previously unselected package libssl-dev:amd64.
+#7 36.89 Preparing to unpack .../26-libssl-dev_3.0.2-0ubuntu1.20_amd64.deb ...
+#7 36.97 Unpacking libssl-dev:amd64 (3.0.2-0ubuntu1.20) ...
+#7 37.41 Selecting previously unselected package libssh2-1-dev:amd64.
+#7 37.41 Preparing to unpack .../27-libssh2-1-dev_1.10.0-3_amd64.deb ...
+#7 37.48 Unpacking libssh2-1-dev:amd64 (1.10.0-3) ...
+#7 37.95 Selecting previously unselected package libxml2-dev:amd64.
+#7 37.95 Preparing to unpack .../28-libxml2-dev_2.9.13+dfsg-1ubuntu0.10_amd64.deb ...
+#7 38.03 Unpacking libxml2-dev:amd64 (2.9.13+dfsg-1ubuntu0.10) ...
+#7 38.51 Selecting previously unselected package libhttp-parser-dev.
+#7 38.51 Preparing to unpack .../29-libhttp-parser-dev_2.9.4-4_amd64.deb ...
+#7 38.59 Unpacking libhttp-parser-dev (2.9.4-4) ...
+#7 38.99 Selecting previously unselected package libgit2-dev:amd64.
+#7 38.99 Preparing to unpack .../30-libgit2-dev_1.1.0+dfsg.1-4.1ubuntu0.1_amd64.deb ...
+#7 39.11 Unpacking libgit2-dev:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+#7 39.81 Setting up libfribidi-dev:amd64 (1.0.8-2ubuntu3.1) ...
+#7 40.27 Setting up libgraphite2-dev:amd64 (1.3.14-1build2) ...
+#7 40.63 Setting up libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.3) ...
+#7 40.94 Setting up libmbedcrypto7:amd64 (2.28.0-1build1) ...
+#7 41.16 Setting up libssl-dev:amd64 (3.0.2-0ubuntu1.20) ...
+#7 41.42 Setting up icu-devtools (70.1-2) ...
+#7 41.62 Setting up libcurl4:amd64 (7.81.0-1ubuntu1.21) ...
+#7 41.95 Setting up libharfbuzz0b:amd64 (2.7.4-1ubuntu3.2) ...
+#7 42.24 Setting up libgirepository-1.0-1:amd64 (1.72.0-1) ...
+#7 42.44 Setting up libssh2-1:amd64 (1.10.0-3) ...
+#7 42.69 Setting up libjpeg8-dev:amd64 (8c-2ubuntu10) ...
+#7 42.89 Setting up libicu-dev:amd64 (70.1-2) ...
+#7 43.18 Setting up libxml2:amd64 (2.9.13+dfsg-1ubuntu0.10) ...
+#7 43.47 Setting up libhttp-parser2.9:amd64 (2.9.4-4) ...
+#7 43.55 Setting up libhttp-parser-dev (2.9.4-4) ...
+#7 43.77 Setting up libharfbuzz-icu0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 44.00 Setting up libmbedx509-1:amd64 (2.28.0-1build1) ...
+#7 44.40 Setting up libmbedtls14:amd64 (2.28.0-1build1) ...
+#7 44.79 Setting up libgit2-1.1:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+#7 45.11 Setting up libjpeg-dev:amd64 (8c-2ubuntu10) ...
+#7 45.31 Setting up libharfbuzz-gobject0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 45.55 Setting up libmbedtls-dev:amd64 (2.28.0-1build1) ...
+#7 45.78 Setting up libfreetype-dev:amd64 (2.11.1+dfsg-1ubuntu0.3) ...
+#7 46.04 Setting up libxml2-dev:amd64 (2.9.13+dfsg-1ubuntu0.10) ...
+#7 46.26 Setting up libcurl4-openssl-dev:amd64 (7.81.0-1ubuntu1.21) ...
+#7 46.52 Setting up gir1.2-glib-2.0:amd64 (1.72.0-1) ...
+#7 46.74 Setting up libssh2-1-dev:amd64 (1.10.0-3) ...
+#7 46.95 Setting up libgit2-dev:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+#7 47.17 Setting up gir1.2-harfbuzz-0.0:amd64 (2.7.4-1ubuntu3.2) ...
+#7 47.37 Setting up libfreetype6-dev:amd64 (2.11.1+dfsg-1ubuntu0.3) ...
+#7 47.59 Setting up libharfbuzz-dev:amd64 (2.7.4-1ubuntu3.2) ...
+#7 47.81 Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+#7 DONE 49.0s
+
+#8 [3/5] COPY . /srv/shiny-server/cyclestats
+#8 DONE 1.1s
+
+#9 [4/5] RUN R -e "    options(repos = c(CRAN = 'https://p3m.dev/cran/__linux__/jammy/latest'));    install.packages('pak');    pak::pkg_install('/srv/shiny-server/cyclestats')"
+#9 1.345 
+#9 1.345 R version 4.4.1 (2024-06-14) -- "Race for Your Life"
+#9 1.345 Copyright (C) 2024 The R Foundation for Statistical Computing
+#9 1.345 Platform: x86_64-pc-linux-gnu
+#9 1.345 
+#9 1.345 R is free software and comes with ABSOLUTELY NO WARRANTY.
+#9 1.345 You are welcome to redistribute it under certain conditions.
+#9 1.345 Type 'license()' or 'licence()' for distribution details.
+#9 1.345 
+#9 1.345   Natural language support but running in an English locale
+#9 1.345 
+#9 1.345 R is a collaborative project with many contributors.
+#9 1.345 Type 'contributors()' for more information and
+#9 1.345 'citation()' on how to cite R or R packages in publications.
+#9 1.345 
+#9 1.345 Type 'demo()' for some demos, 'help()' for on-line help, or
+#9 1.345 'help.start()' for an HTML browser interface to help.
+#9 1.345 Type 'q()' to quit R.
+#9 1.345 
+#9 1.406 >     options(repos = c(CRAN = 'https://p3m.dev/cran/__linux__/jammy/latest'));    install.packages('pak');    pak::pkg_install('/srv/shiny-server/cyclestats')
+#9 1.408 Installing package into ‘/usr/local/lib/R/site-library’
+#9 1.408 (as ‘lib’ is unspecified)
+#9 2.150 trying URL 'https://p3m.dev/cran/__linux__/jammy/latest/src/contrib/pak_0.9.0.tar.gz'
+#9 2.815 Content type 'binary/octet-stream' length 7021538 bytes (6.7 MB)
+#9 2.857 ==================================================
+#9 2.991 downloaded 6.7 MB
+#9 2.991 
+#9 3.464 * installing *binary* package ‘pak’ ...
+#9 3.489 * DONE (pak)
+#9 3.502 
+#9 3.502 The downloaded source packages are in
+#9 3.502 	‘/tmp/RtmphF5t52/downloaded_packages’
+#9 4.319 
+#9 5.139 ✔ Updated metadata database: 4.15 MB in 9 files.
+#9 5.140 
+#9 5.140 ℹ Updating metadata database
+#9 8.420 ✔ Updating metadata database ... done
+#9 8.420 
+#9 9.181  
+#9 9.184 → Will install 46 packages.
+#9 9.191 → Will update 2 packages.
+#9 9.195 → Will download 48 packages with unknown size.
+#9 9.198 + askpass              1.2.1      [dl]
+#9 9.198 + bit                  4.6.0      [dl]
+#9 9.198 + bit64                4.6.0-1    [dl]
+#9 9.198 + bsicons              0.1.2      [dl]
+#9 9.198 + clipr                0.8.0      [dl] + ✔ libx11-dev
+#9 9.198 + commonmark   1.9.2 → 2.0.0      [dl]
+#9 9.198 + crosstalk            1.2.2      [dl]
+#9 9.198 + curl                 7.0.0      [dl] + ✔ libcurl4-openssl-dev, ✔ libssl-dev
+#9 9.198 + cyclestats           0.0.0.9000 [bld][dl]
+#9 9.198 + data.table           1.17.8     [dl]
+#9 9.198 + dplyr                1.1.4      [dl]
+#9 9.198 + DT                   0.34.0     [dl]
+#9 9.198 + farver               2.1.2      [dl]
+#9 9.198 + generics             0.1.4      [dl]
+#9 9.198 + ggplot2              4.0.1      [dl]
+#9 9.198 + gtable               0.3.6      [dl]
+#9 9.198 + hms                  1.1.4      [dl]
+#9 9.198 + htmlwidgets          1.6.4      [dl]
+#9 9.198 + httr                 1.4.7      [dl]
+#9 9.198 + isoband              0.2.7      [dl]
+#9 9.198 + labeling             0.4.3      [dl]
+#9 9.198 + lazyeval             0.2.2      [dl]
+#9 9.198 + litedown             0.8        [dl]
+#9 9.198 + lubridate            1.9.4      [dl]
+#9 9.198 + markdown             2.0        [dl]
+#9 9.198 + openssl              2.3.4      [dl] + ✔ libssl-dev
+#9 9.198 + pillar               1.11.1     [dl]
+#9 9.198 + pkgconfig            2.0.3      [dl]
+#9 9.198 + plotly               4.11.0     [dl]
+#9 9.198 + purrr                1.2.0      [dl]
+#9 9.198 + RColorBrewer         1.1-3      [dl]
+#9 9.198 + readr                2.1.6      [dl]
+#9 9.198 + S7                   0.2.1      [dl]
+#9 9.198 + scales               1.4.0      [dl]
+#9 9.198 + shinyjs              2.1.0      [dl]
+#9 9.198 + stringi              1.8.7      [dl] + ✔ libicu-dev
+#9 9.198 + stringr              1.6.0      [dl]
+#9 9.198 + sys                  3.4.3      [dl]
+#9 9.198 + tibble               3.3.0      [dl]
+#9 9.198 + tidyr                1.3.1      [dl]
+#9 9.198 + tidyselect           1.2.1      [dl]
+#9 9.198 + timechange           0.3.0      [dl]
+#9 9.198 + tzdb                 0.5.0      [dl]
+#9 9.198 + utf8                 1.2.6      [dl]
+#9 9.198 + vctrs                0.6.5      [dl]
+#9 9.198 + viridisLite          0.4.2      [dl]
+#9 9.198 + vroom                1.6.6      [dl]
+#9 9.198 + xfun         0.48  → 0.54       [dl]
+#9 9.200 ✔ All system requirements are already installed.
+#9 9.201   
+#9 9.331 ℹ Getting 48 pkgs with unknown sizes
+#9 9.524 ✔ Got cyclestats 0.0.0.9000 (source) (4.10 kB)
+#9 10.18 ✔ Got clipr 0.8.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (51.32 kB)
+#9 10.20 ✔ Got askpass 1.2.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (21.92 kB)
+#9 10.28 ✔ Got sys 3.4.3 (x86_64-pc-linux-gnu-ubuntu-22.04) (40.83 kB)
+#9 10.31 ✔ Got bsicons 0.1.2 (x86_64-pc-linux-gnu-ubuntu-22.04) (254.01 kB)
+#9 10.33 ✔ Got commonmark 2.0.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (147.53 kB)
+#9 10.34 ✔ Got markdown 2.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (64.27 kB)
+#9 10.40 ✔ Got lazyeval 0.2.2 (x86_64-pc-linux-gnu-ubuntu-22.04) (157.82 kB)
+#9 10.42 ✔ Got bit64 4.6.0-1 (x86_64-pc-linux-gnu-ubuntu-22.04) (492.11 kB)
+#9 10.44 ✔ Got timechange 0.3.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (170.76 kB)
+#9 10.50 ✔ Got bit 4.6.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (630.46 kB)
+#9 10.53 ✔ Got utf8 1.2.6 (x86_64-pc-linux-gnu-ubuntu-22.04) (151.79 kB)
+#9 10.60 ✔ Got tzdb 0.5.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (663.60 kB)
+#9 10.65 ✔ Got purrr 1.2.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (553.63 kB)
+#9 10.67 ✔ Got crosstalk 1.2.2 (x86_64-pc-linux-gnu-ubuntu-22.04) (412.02 kB)
+#9 10.74 ✔ Got lubridate 1.9.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (985.64 kB)
+#9 10.79 ✔ Got litedown 0.8 (x86_64-pc-linux-gnu-ubuntu-22.04) (371.89 kB)
+#9 10.93 ✔ Got scales 1.4.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (841.62 kB)
+#9 11.02 ✔ Got dplyr 1.1.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.49 MB)
+#9 11.05 ✔ Got curl 7.0.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (788.56 kB)
+#9 11.07 ✔ Got openssl 2.3.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.31 MB)
+#9 11.12 ✔ Got shinyjs 2.1.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.09 MB)
+#9 11.13 ✔ Got labeling 0.4.3 (x86_64-pc-linux-gnu-ubuntu-22.04) (61.01 kB)
+#9 11.17 ✔ Got pkgconfig 2.0.3 (x86_64-pc-linux-gnu-ubuntu-22.04) (18.18 kB)
+#9 11.24 ✔ Got httr 1.4.7 (x86_64-pc-linux-gnu-ubuntu-22.04) (484.81 kB)
+#9 11.31 ✔ Got vroom 1.6.6 (x86_64-pc-linux-gnu-ubuntu-22.04) (950.43 kB)
+#9 11.34 ✔ Got xfun 0.54 (x86_64-pc-linux-gnu-ubuntu-22.04) (585.02 kB)
+#9 11.38 ✔ Got hms 1.1.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (103.77 kB)
+#9 11.44 ✔ Got stringi 1.8.7 (x86_64-pc-linux-gnu-ubuntu-22.04) (3.30 MB)
+#9 11.48 ✔ Got RColorBrewer 1.1-3 (x86_64-pc-linux-gnu-ubuntu-22.04) (51.98 kB)
+#9 11.62 ✔ Got DT 0.34.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.78 MB)
+#9 11.73 ✔ Got farver 2.1.2 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.47 MB)
+#9 11.87 ✔ Got isoband 0.2.7 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.64 MB)
+#9 11.91 ✔ Got vctrs 0.6.5 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.32 MB)
+#9 11.96 ✔ Got generics 0.1.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (81.93 kB)
+#9 12.00 ✔ Got tibble 3.3.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (680.62 kB)
+#9 12.10 ✔ Got stringr 1.6.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (333.45 kB)
+#9 12.11 ✔ Got pillar 1.11.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (661.23 kB)
+#9 12.23 ✔ Got gtable 0.3.6 (x86_64-pc-linux-gnu-ubuntu-22.04) (222.82 kB)
+#9 12.24 ✔ Got data.table 1.17.8 (x86_64-pc-linux-gnu-ubuntu-22.04) (2.67 MB)
+#9 12.35 ✔ Got tidyselect 1.2.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (225.21 kB)
+#9 12.37 ✔ Got plotly 4.11.0 (x86_64-pc-linux-gnu-ubuntu-22.04) (3.85 MB)
+#9 12.44 ✔ Got viridisLite 0.4.2 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.30 MB)
+#9 12.49 ✔ Got S7 0.2.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (325.76 kB)
+#9 12.53 ✔ Got htmlwidgets 1.6.4 (x86_64-pc-linux-gnu-ubuntu-22.04) (815.38 kB)
+#9 12.54 ✔ Got tidyr 1.3.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (1.18 MB)
+#9 12.60 ✔ Got readr 2.1.6 (x86_64-pc-linux-gnu-ubuntu-22.04) (862.04 kB)
+#9 13.33 ✔ Got ggplot2 4.0.1 (x86_64-pc-linux-gnu-ubuntu-22.04) (8.47 MB)
+#9 13.46 ✔ Installed askpass 1.2.1  (54ms)
+#9 13.49 ✔ Installed bit 4.6.0  (68ms)
+#9 13.50 ✔ Installed bit64 4.6.0-1  (86ms)
+#9 13.52 ✔ Installed bsicons 0.1.2  (96ms)
+#9 13.56 ✔ Installed clipr 0.8.0  (111ms)
+#9 14.70 ✔ Installed commonmark 2.0.0  (1.3s)
+#9 14.73 ✔ Installed crosstalk 1.2.2  (1.3s)
+#9 14.75 ✔ Installed curl 7.0.0  (1.3s)
+#9 14.78 ✔ Installed data.table 1.17.8  (65ms)
+#9 14.81 ✔ Installed dplyr 1.1.4  (46ms)
+#9 14.86 ✔ Installed DT 0.34.0  (60ms)
+#9 14.88 ✔ Installed farver 2.1.2  (59ms)
+#9 14.91 ✔ Installed generics 0.1.4  (35ms)
+#9 14.94 ✔ Installed gtable 0.3.6  (14ms)
+#9 15.97 ✔ Installed ggplot2 4.0.1  (1.1s)
+#9 16.00 ✔ Installed hms 1.1.4  (1s)
+#9 16.02 ✔ Installed htmlwidgets 1.6.4  (38ms)
+#9 16.05 ✔ Installed httr 1.4.7  (37ms)
+#9 16.10 ✔ Installed isoband 0.2.7  (38ms)
+#9 16.12 ✔ Installed labeling 0.4.3  (58ms)
+#9 16.15 ✔ Installed lazyeval 0.2.2  (37ms)
+#9 16.18 ✔ Installed litedown 0.8  (38ms)
+#9 16.21 ✔ Installed lubridate 1.9.4  (41ms)
+#9 16.25 ✔ Installed markdown 2.0  (44ms)
+#9 16.29 ✔ Installed openssl 2.3.4  (65ms)
+#9 16.31 ✔ Installed pillar 1.11.1  (44ms)
+#9 16.34 ✔ Installed pkgconfig 2.0.3  (37ms)
+#9 16.37 ✔ Installed purrr 1.2.0  (16ms)
+#9 16.40 ✔ Installed plotly 4.11.0  (68ms)
+#9 16.44 ✔ Installed RColorBrewer 1.1-3  (54ms)
+#9 16.47 ✔ Installed readr 2.1.6  (60ms)
+#9 16.50 ✔ Installed S7 0.2.1  (39ms)
+#9 16.52 ✔ Installed scales 1.4.0  (38ms)
+#9 16.55 ✔ Installed shinyjs 2.1.0  (36ms)
+#9 16.60 ✔ Installed stringr 1.6.0  (15ms)
+#9 16.63 ✔ Installed stringi 1.8.7  (93ms)
+#9 16.66 ✔ Installed sys 3.4.3  (37ms)
+#9 16.68 ✔ Installed tibble 3.3.0  (39ms)
+#9 16.71 ✔ Installed tidyr 1.3.1  (41ms)
+#9 16.76 ✔ Installed tidyselect 1.2.1  (39ms)
+#9 16.79 ✔ Installed timechange 0.3.0  (66ms)
+#9 16.82 ✔ Installed tzdb 0.5.0  (43ms)
+#9 16.85 ✔ Installed utf8 1.2.6  (37ms)
+#9 16.87 ✔ Installed vctrs 0.6.5  (37ms)
+#9 16.90 ✔ Installed viridisLite 0.4.2  (38ms)
+#9 16.95 ✔ Installed vroom 1.6.6  (59ms)
+#9 18.35 ✔ Installed xfun 0.54  (1.4s)
+#9 18.36 ℹ Packaging cyclestats 0.0.0.9000
+#9 18.72 ✔ Packaged cyclestats 0.0.0.9000 (354ms)
+#9 18.72 ℹ Building cyclestats 0.0.0.9000
+#9 20.76 ✔ Built cyclestats 0.0.0.9000 (1.9s)
+#9 20.80 ✔ Installed cyclestats 0.0.0.9000 (local) (14ms)
+#9 20.81 ✔ 1 pkg + 82 deps: kept 15, upd 2, added 46, dld 48 (NA B) [17.3s]
+#9 20.81 > 
+#9 20.81 > 
+#9 DONE 22.5s
+
+#10 [5/5] RUN cat > /srv/shiny-server/cyclestats/app.R << 'EOF'
+#10 DONE 1.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 2.4s done
+#11 writing image sha256:2462583f30639978ce503b09244eacd205eebec914c6a8faefd125784bb68cbb 0.1s done
+#11 naming to docker.io/library/cyclestats-shiny
+#11 naming to docker.io/library/cyclestats-shiny 0.1s done
+#11 DONE 2.9s

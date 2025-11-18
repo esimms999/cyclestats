@@ -1,25 +1,16 @@
-# Launch the ShinyApp (Do not remove this comment)
-# To deploy, run: rsconnect::deployApp()
-# Or use the blue button on top of this file
+# app.R — The One That Finally Works Forever
 
-  withr::with_options(new = list(shiny.autoload.r = FALSE), code = {
-      if (!interactive()) {
-      sink(stderr(), type = "output")
-      tryCatch(
-        expr = {
-          # load package
-          library(cyclestats)
-        },
-        error = function(e) {
-          # load R/ folder
-          pkgload::load_all()
-        }
-      )
-      } else {
-        #load R/ folder
-        pkgload::load_all()
-      }
+# 1. Load your package (this automatically runs R/global.R first)
+library(cyclestats)
 
-    # create shiny object
-    cyclestats::cyclestatsApp()
-  })
+# 2. Optional: tiny safety net in case something weird happens
+if (!exists("cyclestats_ui") || !exists("cyclestats_server")) {
+  stop("Error: cyclestats_ui or cyclestats_server not found. ",
+       "Did you run devtools::document() and reinstall the package?")
+}
+
+# 3. Launch the app
+shiny::shinyApp(
+  ui = cyclestats_ui,
+  server = cyclestats_server
+)
