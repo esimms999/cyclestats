@@ -1,13 +1,6 @@
-#' Cycle Stats app standalone function
+#' Launch the CycleStats Shiny application
 #'
-#' Wrapper function for `shinyApp()`
-#'
-#' @return shiny app
-#'
-#' @import shiny
-#'
-#' @export cyclestatsApp
-#'
+#' @export
 cyclestatsApp <- function() {
   shiny::shinyApp(ui = cyclestats_ui, server = cyclestats_server)
 }

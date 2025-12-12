@@ -1,0 +1,11 @@
+renv/
+renv.lock
+.Renviron
+.Rprofile
+.RData
+.Rhistory
+.Rproj.user/
+.git/
+.gitignore
+Dockerfile*
+docker-compose*

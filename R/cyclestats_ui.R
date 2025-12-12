@@ -8,6 +8,7 @@
 #' @rawNamespace import(shinyjs, except=c(runExample))
 #' @rawNamespace import(plotly, except = last_plot)
 #' @return `ui` argument in `cyclestatsApp()`
+#' @export
 
 cyclestats_ui <- function() {
   useShinyjs()
