@@ -10,4 +10,5 @@
  
  ![](cyclestats_QR.png)
  
- V0.76
+ V0.78
+ 
