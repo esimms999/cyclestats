@@ -23,6 +23,9 @@ cyclestats_init <- function() {
     dplyr::filter(activity_type == "Ride") |>
     dplyr::select(activity_id, activity_datetime, activity_name, activity_distance, activity_moving_time) |>
 
+    # Strava changed activities.csv to sorted descending; I now explicitly sort ascending.
+    dplyr::arrange(activity_id) |>
+
     # Fix an error in the data
     dplyr::mutate(activity_moving_time = ifelse(activity_id == "2949643229", 3271, activity_moving_time)) |>
 
