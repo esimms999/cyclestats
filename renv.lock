@@ -514,7 +514,7 @@
     },
     "clipr": {
       "Package": "clipr",
-      "Version": "0.8.0",
+      "Version": "0.8.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Read and Write from the System Clipboard",
@@ -536,12 +536,12 @@
       "VignetteBuilder": "knitr",
       "Encoding": "UTF-8",
       "Language": "en-US",
-      "RoxygenNote": "7.1.2",
+      "RoxygenNote": "7.3.3",
       "SystemRequirements": "xclip (https://github.com/astrand/xclip) or xsel (http://www.vergenet.net/~conrad/software/xsel/) for accessing the X11 clipboard, or wl-clipboard (https://github.com/bugaevc/wl-clipboard) for systems using Wayland.",
       "NeedsCompilation": "no",
-      "Author": "Matthew Lincoln [aut, cre] (<https://orcid.org/0000-0002-4387-3384>), Louis Maddox [ctb], Steve Simpson [ctb], Jennifer Bryan [ctb]",
+      "Author": "Matthew Lincoln [aut, cre] (ORCID: <https://orcid.org/0000-0002-4387-3384>), Louis Maddox [ctb], Steve Simpson [ctb], Jennifer Bryan [ctb]",
       "Maintainer": "Matthew Lincoln <matthew.d.lincoln@gmail.com>",
-      "Repository": "RSPM"
+      "Repository": "https://p3m.dev/cran/latest"
     },
     "commonmark": {
       "Package": "commonmark",
@@ -3675,7 +3675,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.57",
+      "Version": "0.58",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Supporting Functions for Packages Maintained by 'Yihui Xie'",
@@ -3714,8 +3714,8 @@
       "URL": "https://github.com/yihui/xfun",
       "BugReports": "https://github.com/yihui/xfun/issues",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.3",
       "VignetteBuilder": "litedown",
+      "Config/roxygen2/version": "8.0.0",
       "NeedsCompilation": "yes",
       "Author": "Yihui Xie [aut, cre, cph] (ORCID: <https://orcid.org/0000-0003-0645-5666>, URL: https://yihui.org), Wush Wu [ctb], Daijiang Li [ctb], Xianying Tan [ctb], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Christophe Dervieux [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
